@@ -8,7 +8,7 @@ import Other from './work/Other.tsx';
 
 const WorkHistory = () => {
   // Состояния для контроля развернутости секций
-  const [expandedWork, setExpandedWork] = React.useState(true);
+  // const [expandedWork, setExpandedWork] = React.useState(true);
 
   return (
     <>

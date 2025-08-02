@@ -11,6 +11,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import Tooltip from '@mui/material/Tooltip';
 import ArtistocratLogo from '../../assets/aristocrat.svg';
 
 const Aristocrat = () => {
@@ -48,52 +49,203 @@ const Aristocrat = () => {
               />
             </Box>
 
-            <List dense>
+            <List
+              dense
+              sx={{
+                '& .term': {
+                  borderBottom: '1px dotted',
+                  mx: 0.5,
+                },
+              }}
+            >
               <ListItem>
-                <ListItemText primary="Интегрировал Vault, Service Discovery и RabbitMQ в микросервисы UI команды" />
+                <ListItemText
+                  primary={
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className="techText"
+                    >
+                      Интегрировал
+                      <Tooltip
+                        title="Инструмент для безопасного хранения и доступа к секретам, токенам и другим конфиденциальным данным"
+                        arrow
+                      >
+                        <span className="term">Vault</span>
+                      </Tooltip>
+                      <Tooltip
+                        title="Механизм для обнаружения и регистрации доступных сервисов в распределенной системе"
+                        arrow
+                      >
+                        <span className="term">Service Discovery</span>
+                      </Tooltip>
+                      и
+                      <Tooltip
+                        title="Брокер сообщений для асинхронной передачи данных между сервисами"
+                        arrow
+                      >
+                        <span className="term">RabbitMQ</span>
+                      </Tooltip>
+                      в микросервисы UI команды
+                    </Typography>
+                  }
+                />
               </ListItem>
 
               <ListItem>
-                <ListItemText primary="Улучшил производительность микросервиса NodeJS API-Gateway  на Typescript и масштабировал в Kubernetes на N pod" />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Участвовал в разработке системы для создания, управления и анализа рекламных интеграций для мобильные и десктопные игры" />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Разработал микросервис сокетов на основе Socket.IO. Это обеспечило проекту асинхронность в UI." />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Участвовал в настройке ELK стека и Jenkins Jobs" />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Провел исследование на предмет утечек памяти, и аномалий в работе API, настроив Prometheus для NodeJS ApiGateway. " />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Улучшил скорость исправления UI ошибок, выполнив интеграцию React и NodeJS ApiGateway с Sentry. " />
-              </ListItem>
-              <ListItem>
                 <ListItemText
-                  primary="Внедрил новую единую платформу автоматизированного тестирования Playwright (TypeScript) в компанию. На основе чего были написаны:"
-                  secondary={
-                    <Typography component="span" variant="body2">
-                      • API Health тесты
-                      <br />
-                      • Data Quality для контроля качества данных
-                      <br />
-                      • Функциональное API-тестирование
-                      <br />
-                      • Регрессионное тестирование, каждый релиз
-                      <br />
-                      • Компонентное тестирование для UI пакета
-                      <br />
-                      • Unit тестирование для бизнес логики
-                      <br />
+                  primary={
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className="techText"
+                    >
+                      Улучшил производительность микросервиса NodeJS API-Gateway
+                      на
+                      <Tooltip
+                        title="Строго типизированный надмножество JavaScript, добавляющий статическую типизацию"
+                        arrow
+                      >
+                        <span className="term">TypeScript</span>
+                      </Tooltip>
+                      и масштабировал в
+                      <Tooltip
+                        title="Система оркестрации контейнеров для автоматического развертывания, масштабирования и управления контейнеризированными приложениями"
+                        arrow
+                      >
+                        <span className="term">Kubernetes</span>
+                      </Tooltip>
+                      на N pod
                     </Typography>
                   }
                 />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Улучшил Largest Contentful Paint (LCP) метрику сайта путем дробления chunks во время сборки." />
+                <ListItemText primary="Участвовал в разработке системы для создания, управления и анализа рекламных интеграций для мобильные и десктопные игры" />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary={
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className="techText"
+                    >
+                      Разработал микросервис сокетов на основе
+                      <Tooltip
+                        title="Библиотека для двунаправленной связи в реальном времени между клиентами и сервером"
+                        arrow
+                      >
+                        <span className="term">Socket.IO</span>
+                      </Tooltip>
+                      . Это обеспечило проекту асинхронность в UI.
+                    </Typography>
+                  }
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary={
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className="techText"
+                    >
+                      Участвовал в настройке
+                      <Tooltip
+                        title="Стек Elasticsearch, Logstash и Kibana для поиска, анализа и визуализации логов"
+                        arrow
+                      >
+                        <span className="term">ELK</span>
+                      </Tooltip>
+                      стека и
+                      <Tooltip
+                        title="Инструмент непрерывной интеграции и доставки (CI/CD), автоматизирующий процессы сборки и развертывания"
+                        arrow
+                      >
+                        <span className="term">Jenkins</span>
+                      </Tooltip>
+                      Jobs
+                    </Typography>
+                  }
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary={
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className="techText"
+                    >
+                      Провел исследование на предмет утечек памяти, и аномалий в
+                      работе API, настроив
+                      <Tooltip
+                        title="Инструмент мониторинга производительности и сбора метрик"
+                        arrow
+                      >
+                        <span className="term">Prometheus</span>
+                      </Tooltip>
+                      для NodeJS ApiGateway.
+                    </Typography>
+                  }
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary={
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className="techText"
+                    >
+                      Улучшил скорость исправления UI ошибок, выполнив
+                      интеграцию
+                      <Tooltip
+                        title="JavaScript-библиотека для создания пользовательских интерфейсов на основе компонентного подхода"
+                        arrow
+                      >
+                        <span className="term">React</span>
+                      </Tooltip>
+                      и NodeJS ApiGateway с
+                      <Tooltip
+                        title="Платформа мониторинга ошибок и производительности приложений в реальном времени"
+                        arrow
+                      >
+                        <span className="term">Sentry</span>
+                      </Tooltip>
+                      .
+                    </Typography>
+                  }
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary={
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className="techText"
+                    >
+                      Внедрил новую единую платформу автоматизированного
+                      тестирования
+                      <Tooltip
+                        title="Фреймворк для автоматизации end-to-end тестирования веб-приложений"
+                        arrow
+                      >
+                        <span className="term">Playwright</span>
+                      </Tooltip>
+                      (
+                      <Tooltip
+                        title="Строго типизированный язык программирования, расширяющий возможности JavaScript"
+                        arrow
+                      >
+                        <span className="term">TypeScript</span>
+                      </Tooltip>
+                      ) в компанию.
+                    </Typography>
+                  }
+                />
               </ListItem>
             </List>
           </CardContent>
