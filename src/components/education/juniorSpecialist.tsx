@@ -7,24 +7,29 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import SchoolIcon from '@mui/icons-material/School';
+import Tooltip from '@mui/material/Tooltip';
 
 const JuniorSpecialist = () => {
   return (
     <TimelineItem>
-      <TimelineOppositeContent color="text.secondary">
+      <TimelineOppositeContent color="text.secondary" sx={{ mt: 1.5 }}>
         2009 - 2012
       </TimelineOppositeContent>
       <TimelineSeparator>
-        <TimelineDot color="success">
-          <SchoolIcon />
-        </TimelineDot>
+        <Tooltip title="Диплом с отличием" arrow placement={'top'}>
+          <TimelineDot color="success">
+            <SchoolIcon />
+          </TimelineDot>
+        </Tooltip>
       </TimelineSeparator>
       <TimelineContent>
         <Card variant="outlined">
           <CardContent>
-            <Typography variant="h6" component="div" fontWeight="bold">
-              Младший специалист
-            </Typography>
+            <Tooltip title="Диплом с отличием" arrow placement={'top'}>
+              <Typography variant="h6" component="div" fontWeight="bold">
+                Младший специалист
+              </Typography>
+            </Tooltip>
             <Typography variant="body1" color="text.primary">
               Разработка программного обеспечения
             </Typography>

@@ -8,7 +8,6 @@ import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -20,9 +19,7 @@ const Other = () => {
         2009 — 2014
       </TimelineOppositeContent>
       <TimelineSeparator>
-        <TimelineDot color="info" variant="outlined">
-          <WorkHistoryIcon />
-        </TimelineDot>
+        <WorkHistoryIcon fontSize={'large'} />
       </TimelineSeparator>
       <TimelineContent>
         <Card variant="outlined" sx={{ mb: 3 }}>

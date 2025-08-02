@@ -12,7 +12,7 @@ import SchoolIcon from '@mui/icons-material/School';
 const Master = () => {
   return (
     <TimelineItem>
-      <TimelineOppositeContent color="text.secondary">
+      <TimelineOppositeContent color="text.secondary" sx={{ mt: 1.5 }}>
         2015 - 2017
       </TimelineOppositeContent>
       <TimelineSeparator>

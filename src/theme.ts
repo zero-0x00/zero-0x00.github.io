@@ -48,7 +48,7 @@ const darkPalette = createTheme({
     }),
     success: theme.palette.augmentColor({
       color: {
-        main: '#38B800',
+        main: '#38A800',
       },
       name: 'success',
     }),
