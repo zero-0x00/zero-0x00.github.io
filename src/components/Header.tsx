@@ -50,7 +50,7 @@ function Header() {
                   <ContactPhoneIcon color={'action'} />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Телефон" secondary="+7 (918) 0584679" />
+              <ListItemText primary="Телефон" secondary="+7 (918) 058-46-79" />
             </ListItem>
             <ListItem>
               <ListItemAvatar>

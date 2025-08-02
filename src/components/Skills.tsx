@@ -1,125 +1,97 @@
-import * as React from 'react';
-
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
 import CodeIcon from '@mui/icons-material/Code';
+import SettingsIcon from '@mui/icons-material/Settings';
+import StorageIcon from '@mui/icons-material/Storage';
+import SpeedIcon from '@mui/icons-material/Speed';
+import ArchitectureIcon from '@mui/icons-material/Architecture';
+import BugReportIcon from '@mui/icons-material/BugReport';
 import Avatar from '@mui/material/Avatar';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
 
-function App() {
-  // const [expandedSkills, setExpandedSkills] = React.useState(true);
+import { SkillCategory } from './skills/types';
+import {
+  categoryNames,
+  categoryOrder,
+  skillsByCategory,
+} from './skills/skillsData';
 
-  // Массив навыков для отображения в виде чипов
-  const skills = [
-    'Typescript',
-    'JavaScript',
-    'Node.js',
-    'Webpack',
-    'Vite',
-    'SWC',
-    'Babel',
-    'ReactJS',
-    'Tanstack Query',
-    'Recharts',
-    'Formik',
-    'Redux',
-    'koa',
-    'Material UI',
-    'Jenkins',
-    'Kibana',
-    'Grafana',
-    'Sentry',
-    'GitHub Copilot',
-    'OpenAI ChatGPT',
-    'Prometheus',
-    'axios',
-    'Ionic',
-    'git',
-    'REST API',
-    'Nginx',
-    'Lerna + nx',
-    'Kubernetes',
-    'Styled Components',
-    'TDD',
-    'BDD',
-    'Agile',
-    'Scrum',
-    'Waterfall',
-    'Kanban',
-    'DevOps',
-  ];
+function Skills() {
+  // Функция для определения иконки на основе категории
+  const getCategoryIcon = (category: SkillCategory) => {
+    switch (category) {
+      case 'language':
+      case 'framework':
+        return <CodeIcon fontSize="small" />;
+      case 'tool':
+        return <SettingsIcon fontSize="small" />;
+      case 'devops':
+        return <StorageIcon fontSize="small" />;
+      case 'methodology':
+        return <ArchitectureIcon fontSize="small" />;
+      case 'testing':
+        return <BugReportIcon fontSize="small" />;
+      default:
+        return <SpeedIcon fontSize="small" />;
+    }
+  };
 
   return (
-    <Card variant="outlined" sx={{ mb: 3 }}>
-      <CardContent>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-          {skills.map((skill, index) => {
-            // Определяем категорию навыка для цвета
-            let color = 'default';
-            if (
-              skill.includes('Script') ||
-              skill === 'TypeScript' ||
-              skill === 'JavaScript' ||
-              skill === 'Node.js' ||
-              skill === 'ReactJS'
-            ) {
-              color = 'primary';
-            } else if (
-              skill === 'Kubernetes' ||
-              skill === 'Jenkins' ||
-              skill === 'Grafana' ||
-              skill === 'Prometheus' ||
-              skill === 'DevOps'
-            ) {
-              color = 'secondary';
-            } else if (
-              skill === 'Agile' ||
-              skill === 'Scrum' ||
-              skill === 'Kanban' ||
-              skill === 'Waterfall'
-            ) {
-              color = 'success';
-            } else if (
-              skill === 'TDD' ||
-              skill === 'BDD' ||
-              skill.includes('Test')
-            ) {
-              color = 'info';
-            }
+    <>
+      <Typography variant={'h5'} sx={{ m: 2 }}>
+        Навыки
+      </Typography>
 
-            return (
-              <Chip
-                key={index}
-                label={skill}
-                color={
-                  color as
-                    | 'default'
-                    | 'primary'
-                    | 'secondary'
-                    | 'success'
-                    | 'info'
-                    | 'warning'
-                    | 'error'
-                }
-                variant="outlined"
-                avatar={
-                  skill.includes('Script') ||
-                  skill === 'ReactJS' ||
-                  skill === 'Node.js' ? (
-                    <Avatar sx={{ bgcolor: 'transparent' }}>
-                      <CodeIcon fontSize="small" />
-                    </Avatar>
-                  ) : undefined
-                }
-                sx={{ m: 0.5 }}
-              />
-            );
-          })}
-        </Box>
-      </CardContent>
-    </Card>
+      <Grid sx={{ mt: 3, pl: 2 }}>
+        {categoryOrder.map(
+          (category) =>
+            skillsByCategory[category] && (
+              <Box key={category} sx={{ mb: 3 }}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ mb: 1, fontWeight: 'bold' }}
+                >
+                  {categoryNames[category]}
+                </Typography>
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                  {skillsByCategory[category].map((skill, index) => (
+                    <Tooltip
+                      key={index}
+                      title={skill.description || skill.name}
+                      arrow
+                    >
+                      <Chip
+                        label={skill.name}
+                        color={skill.color || 'default'}
+                        variant="outlined"
+                        avatar={
+                          skill.showIcon ? (
+                            <Avatar sx={{ bgcolor: 'transparent' }}>
+                              {getCategoryIcon(skill.category)}
+                            </Avatar>
+                          ) : undefined
+                        }
+                        sx={{
+                          m: 0.5,
+                          cursor: 'pointer',
+                          '&:hover': {
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                            transform: 'translateY(-2px)',
+                            transition: 'all 0.2s ease-in-out',
+                          },
+                        }}
+                      />
+                    </Tooltip>
+                  ))}
+                </Box>
+              </Box>
+            )
+        )}
+      </Grid>
+    </>
   );
 }
 
-export default App;
+export default Skills;

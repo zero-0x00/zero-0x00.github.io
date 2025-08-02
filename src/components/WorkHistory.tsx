@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Timeline from '@mui/lab/Timeline';
 import MTG from './work/MTG.tsx';
@@ -16,7 +15,7 @@ const WorkHistory = () => {
         Опыт работы
       </Typography>
 
-      <Timeline position={'alternate'}>
+      <Timeline position={'alternate-reverse'}>
         <MTG />
         <Aristocrat />
         <Plarium />
