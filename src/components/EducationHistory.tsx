@@ -6,7 +6,7 @@ import Master from './education/master.tsx';
 
 const EducationHistory = () => {
   return (
-    <SectionAccordion title="Образование" id="education">
+    <SectionAccordion title="Образование" id="education" defaultExpanded={true}>
       <Timeline
         position="alternate-reverse"
         sx={{ maxWidth: '900px', margin: '0 auto' }}

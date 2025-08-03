@@ -18,9 +18,22 @@ const Aristocrat = () => {
         <TooltipListItem
           text={
             <>
-              Улучшил производительность микросервиса NodeJS API-Gateway на
+              Улучшил производительность микросервиса
               <Tooltip
-                title="Строго типизированный надмножество JavaScript, добавляющий статическую типизацию"
+                title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8"
+                arrow
+              >
+                <span className="term">NodeJS</span>
+              </Tooltip>
+              <Tooltip
+                title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы"
+                arrow
+              >
+                <span className="term">API-Gateway</span>
+              </Tooltip>{' '}
+              на
+              <Tooltip
+                title="Строго типизированный язык программирования, расширяющий JavaScript добавлением статической типизации, интерфейсов и других возможностей"
                 arrow
               >
                 <span className="term">TypeScript</span>
@@ -64,7 +77,7 @@ const Aristocrat = () => {
               </Tooltip>
               стека и
               <Tooltip
-                title="Инструмент непрерывной интеграции и доставки (CI/CD), автоматизирующий процессы с��орки и развертывания"
+                title="Инструмент непрерывной интеграции и доставки (CI/CD), автоматизирующий процессы сборки и развертывания"
                 arrow
               >
                 <span className="term">Jenkins</span>
@@ -78,14 +91,33 @@ const Aristocrat = () => {
           text={
             <>
               Провел исследование на предмет утечек памяти, и аномалий в работе
-              API, настроив
+              <Tooltip
+                title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы"
+                arrow
+              >
+                <span className="term">API</span>
+              </Tooltip>
+              , настроив
               <Tooltip
                 title="Инструмент мониторинга производительности и сбора метрик"
                 arrow
               >
                 <span className="term">Prometheus</span>
               </Tooltip>
-              для NodeJS ApiGateway.
+              для
+              <Tooltip
+                title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8"
+                arrow
+              >
+                <span className="term">NodeJS</span>
+              </Tooltip>
+              <Tooltip
+                title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы"
+                arrow
+              >
+                <span className="term">ApiGateway</span>
+              </Tooltip>
+              .
             </>
           }
         />

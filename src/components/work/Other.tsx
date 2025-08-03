@@ -18,7 +18,14 @@ const Other = () => {
         <TooltipListItem
           text={
             <>
-              Разработал, внедрил и поддерживал CMS на
+              Разработал, внедрил и поддерживал
+              <Tooltip
+                title="Content Management System - Система управления контентом, по��воляющая создавать и редактировать цифровой контент"
+                arrow
+              >
+                <span className="term">CMS</span>
+              </Tooltip>{' '}
+              на
               <Tooltip
                 title="Язык программирования, используемый для создания веб-приложений"
                 arrow
