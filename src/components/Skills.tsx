@@ -10,6 +10,7 @@ import BugReportIcon from '@mui/icons-material/BugReport';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import SectionAccordion from './common/SectionAccordion';
 
 import { SkillCategory } from './skills/types';
 import {
@@ -39,12 +40,8 @@ function Skills() {
   };
 
   return (
-    <>
-      <Typography variant={'h5'} sx={{ m: 2 }}>
-        Навыки
-      </Typography>
-
-      <Grid sx={{ mt: 3, pl: 2 }}>
+    <SectionAccordion title="Навыки" id="skills" defaultExpanded={true}>
+      <Grid sx={{ mt: 1 }}>
         {categoryOrder.map(
           (category) =>
             skillsByCategory[category] && (
@@ -90,7 +87,7 @@ function Skills() {
             )
         )}
       </Grid>
-    </>
+    </SectionAccordion>
   );
 }
 

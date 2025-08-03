@@ -1,16 +1,12 @@
-import Typography from '@mui/material/Typography';
 import Timeline from '@mui/lab/Timeline';
+import SectionAccordion from './common/SectionAccordion';
 import JuniorSpecialist from './education/juniorSpecialist.tsx';
 import Bachelor from './education/bachelor.tsx';
 import Master from './education/master.tsx';
 
 const EducationHistory = () => {
   return (
-    <>
-      <Typography variant={'h5'} sx={{ m: 2 }}>
-        Образование
-      </Typography>
-
+    <SectionAccordion title="Образование" id="education">
       <Timeline
         position="alternate-reverse"
         sx={{ maxWidth: '900px', margin: '0 auto' }}
@@ -19,7 +15,7 @@ const EducationHistory = () => {
         <Bachelor />
         <JuniorSpecialist />
       </Timeline>
-    </>
+    </SectionAccordion>
   );
 };
 

@@ -173,6 +173,14 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
         'Инструмент для изолированной разработки и тестирования UI компонентов',
     },
     {
+      name: 'Figma',
+      category: 'tool',
+      showIcon: true,
+      color: 'success',
+      description:
+        'Облачный инструмент для разработки интерфейсов и прототипирования с возможностью совместной работы',
+    },
+    {
       name: 'git',
       category: 'tool',
       color: 'success',

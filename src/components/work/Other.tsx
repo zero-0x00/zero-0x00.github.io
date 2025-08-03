@@ -1,69 +1,83 @@
-import Typography from '@mui/material/Typography';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
+import Tooltip from '@mui/material/Tooltip';
+
+import TooltipList from '../common/TooltipList';
+import TooltipListItem from '../common/TooltipListItem';
+import WorkTimelineItem from '../common/WorkTimelineItem';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 
 const Other = () => {
   return (
-    <TimelineItem>
-      <TimelineOppositeContent color="text.secondary">
-        2009 — 2014
-      </TimelineOppositeContent>
-      <TimelineSeparator>
-        <WorkHistoryIcon fontSize={'large'} />
-      </TimelineSeparator>
-      <TimelineContent>
-        <Card variant="outlined" sx={{ mb: 3 }}>
-          <CardContent>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-                mb: 2,
-              }}
-            >
-              <Typography
-                variant="h6"
-                component="div"
-                sx={{ fontWeight: 'bold' }}
+    <WorkTimelineItem
+      period="Февраль 2014 — Январь 2016"
+      company="Прочие проекты"
+      position="Junior Frontend Developer"
+      logo={<WorkHistoryIcon fontSize={'large'} />}
+      isLast={true}
+    >
+      <TooltipList>
+        <TooltipListItem
+          text={
+            <>
+              Разработал, внедрил и поддерживал CMS на
+              <Tooltip
+                title="Язык программирования, используемый для создания веб-приложений"
+                arrow
               >
-                Freelance
-              </Typography>
-              <Chip
-                label="FullStack Web-разработчик"
-                color="info"
-                variant="outlined"
-              />
-            </Box>
+                <span className="term">PHP</span>
+              </Tooltip>
+              для управления контентом на сайте магазина горных велосипедов.
+            </>
+          }
+        />
 
-            <List dense>
-              <ListItem>
-                <ListItemText primary="Полный цикл разработки веб-приложений: от клиентской логики до серверной части и баз данных" />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Разработка пользовательских интерфейсов и REST API" />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Настройка серверов и деплой приложений" />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Обеспечение стабильности, безопасности и масштабируемости решений" />
-              </ListItem>
-            </List>
-          </CardContent>
-        </Card>
-      </TimelineContent>
-    </TimelineItem>
+        <TooltipListItem
+          text={
+            <>
+              Участвовал в разработке интерактивной карты для
+              <Tooltip
+                title="Система управления взаимоотношениями с клиентами"
+                arrow
+              >
+                <span className="term">CRM</span>
+              </Tooltip>
+              системы нефтедобывающей компании.
+            </>
+          }
+        />
+
+        <TooltipListItem text="Создал веб сайт с возможностью оформления документов для компании юридической помощи." />
+
+        <TooltipListItem
+          text={
+            <>
+              Занимался разработкой
+              <Tooltip title="Пользовательский интерфейс" arrow>
+                <span className="term">UI</span>
+              </Tooltip>
+              для нескольких лендингов используя
+              <Tooltip title="Язык разметки веб-страниц" arrow>
+                <span className="term">HTML</span>
+              </Tooltip>
+              ,
+              <Tooltip
+                title="Язык таблиц стилей для описания внешнего вида документа"
+                arrow
+              >
+                <span className="term">CSS</span>
+              </Tooltip>
+              и
+              <Tooltip
+                title="Язык программирования, используемый для создания интерактивных элементов на веб-страницах"
+                arrow
+              >
+                <span className="term">JavaScript</span>
+              </Tooltip>
+              .
+            </>
+          }
+        />
+      </TooltipList>
+    </WorkTimelineItem>
   );
 };
 
