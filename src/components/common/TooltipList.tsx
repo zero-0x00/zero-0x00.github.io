@@ -17,6 +17,7 @@ const TooltipList = ({ children, sx }: TooltipListProps) => {
         '& .term': {
           borderBottom: '1px dotted',
           mx: 0.5,
+          display: 'inline-flex',
         },
         ...sx,
       }}

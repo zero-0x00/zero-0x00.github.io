@@ -1,19 +1,14 @@
 import Typography from '@mui/material/Typography';
-
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
-import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
-import JavascriptIcon from '@mui/icons-material/Javascript';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
 import avatarImage from '../assets/avatar.jpg';
-import jsImage from '../assets/js.png';
 
 function Header() {
   return (
@@ -44,62 +39,66 @@ function Header() {
       <Grid container size={7} spacing={2}>
         <Grid size={6}>
           <List>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar color={'text.primary'}>
-                  <ContactPhoneIcon color={'action'} />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary="Телефон" secondary="+7 (918) 058-46-79" />
+            <ListItem sx={{ py: 0 }}>
+              <ListItemText
+                primary="Телефон"
+                secondary={
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Link href="tel:+79180584679" color="inherit">
+                      +7 (918) 058-46-79
+                    </Link>
+                    <Link
+                      href="https://t.me/LazyEngineer_0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="inherit"
+                      aria-label="Telegram"
+                    >
+                      <TelegramIcon fontSize="small" />
+                    </Link>
+                    <Link
+                      href="https://wa.me/79180584679"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="inherit"
+                      aria-label="WhatsApp"
+                    >
+                      <WhatsAppIcon fontSize="small" />
+                    </Link>
+                  </Box>
+                }
+              />
             </ListItem>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar>
-                  <EmailIcon color={'action'} />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary="Email" secondary="marvelsrp@yandex.ru" />
+            <ListItem sx={{ py: 0 }}>
+              <ListItemText
+                primary="Email"
+                secondary={
+                  <Link href="mailto:marvelsrp@yandex.ru" color="inherit">
+                    marvelsrp@yandex.ru
+                  </Link>
+                }
+              />
             </ListItem>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar src={jsImage}>
-                  <JavascriptIcon fontSize={'large'} color={'action'} />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary="На позиции Frontend" secondary="10 лет" />
+            <ListItem sx={{ py: 0 }}>
+              <ListItemText primary="На позиции Frontend" secondary="11 лет" />
             </ListItem>
           </List>
         </Grid>
         <Grid size={6}>
           <List>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar>
-                  <LocationOnIcon color={'action'} />
-                </Avatar>
-              </ListItemAvatar>
+            <ListItem sx={{ py: 0 }}>
               <ListItemText
                 primary="Проживание"
                 secondary="Московская область, г.о. Красногорск"
               />
             </ListItem>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar>
-                  <WorkHistoryIcon color={'action'} />
-                </Avatar>
-              </ListItemAvatar>
+            <ListItem sx={{ py: 0 }}>
               <ListItemText
                 primary="Формат работы"
                 secondary="Полная занятость, Гибрид, Удаленно."
               />
             </ListItem>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar>
-                  <AccountBalanceIcon color={'action'} />
-                </Avatar>
-              </ListItemAvatar>
+            <ListItem sx={{ py: 0 }}>
               <ListItemText
                 primary="Гражданство"
                 secondary="Российская федерация"

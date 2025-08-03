@@ -45,7 +45,13 @@ const Aristocrat = () => {
               >
                 <span className="term">Kubernetes</span>
               </Tooltip>
-              на N pod
+              на N
+              <Tooltip
+                title="Наименьшая и простейшая единица в Kubernetes, представляющая собой группу из одного или нескольких контейнеров, которые совместно используют хранилище и сеть"
+                arrow
+              >
+                <span className="term">pod</span>
+              </Tooltip>
             </>
           }
         />

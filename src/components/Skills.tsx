@@ -20,7 +20,6 @@ import {
 } from './skills/skillsData';
 
 function Skills() {
-  // Функция для определения иконки на основе категории
   const getCategoryIcon = (category: SkillCategory) => {
     switch (category) {
       case 'language':
@@ -45,13 +44,15 @@ function Skills() {
         {categoryOrder.map(
           (category) =>
             skillsByCategory[category] && (
-              <Box key={category} sx={{ mb: 3 }}>
-                <Typography
-                  variant="subtitle1"
-                  sx={{ mb: 1, fontWeight: 'bold' }}
-                >
-                  {categoryNames[category]}
-                </Typography>
+              <Box key={category} sx={{ mb: 1 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                  <Typography
+                    variant="subtitle1"
+                    sx={{ fontWeight: 'bold', mr: 1 }}
+                  >
+                    {categoryNames[category]}
+                  </Typography>
+                </Box>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                   {skillsByCategory[category].map((skill, index) => (
                     <Tooltip

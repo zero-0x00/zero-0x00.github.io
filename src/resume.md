@@ -47,7 +47,7 @@
 - Обеспечение стабильности, безопасности и масштабируемости решений
 
 ## Дополнительная активность:
-### Bug Bounty Researcher — 2022 — настоящее время
+### Bug Bounty Researcher
 - 🕵️‍♂️ Участие в программах по поиску уязвимостей на Bug Bounty площадке [BI.ZONE](https://app.bugbounty.bi.zone/profile/zero-0x00)
 - 🏆 [Соревнование программистов Yandex CodeRun — 2024 Фронтенд 7 место](https://contest-hidden.s3-private.mds.yandex.net/certificate/10010466-e85e-1bde-1911-9ed19c988182?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250424T085800Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Credential=V0T1EzqIkxfG5tKj9dfL%2F20250424%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=5efd530130e4c9484fc480713040d7c90b341bdcabc68c0944a87a686094c9c5)
 

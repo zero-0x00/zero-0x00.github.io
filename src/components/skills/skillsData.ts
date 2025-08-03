@@ -203,7 +203,7 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
       showIcon: true,
       color: 'warning',
       description:
-        'Набор инструментов для тестирования React-компонентов, ориентированный на пользователя',
+        'Набор инструментов для тестирования React-компонентов, ориентированной на пользователя',
     },
     {
       name: 'Playwright',
@@ -359,6 +359,7 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
         'Непрерывная интеграция и непрерывная доставка - практики автоматизации разработки',
     },
   ],
+  bugbounty: [],
 };
 
 // Названия категорий для отображения
@@ -369,6 +370,7 @@ export const categoryNames: Record<SkillCategory, string> = {
   devops: 'DevOps',
   methodology: 'Методологии',
   testing: 'Тестирование',
+  bugbounty: 'Bug Bounty',
 };
 
 // Порядок отображения категорий

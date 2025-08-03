@@ -20,7 +20,7 @@ const Other = () => {
             <>
               Разработал, внедрил и поддерживал
               <Tooltip
-                title="Content Management System - Система управления контентом, по��воляющая создавать и редактировать цифровой контент"
+                title="Content Management System - Система управления контентом, позволяющая создавать и редактировать цифровой контент"
                 arrow
               >
                 <span className="term">CMS</span>

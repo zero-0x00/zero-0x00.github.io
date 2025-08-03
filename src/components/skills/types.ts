@@ -5,7 +5,8 @@ export type SkillCategory =
   | 'tool'
   | 'devops'
   | 'methodology'
-  | 'testing';
+  | 'testing'
+  | 'bugbounty';
 
 // Обновлено с учетом доступных в MUI цветов для Chip и добавленного pending
 export type SkillColorType =

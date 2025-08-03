@@ -9,20 +9,14 @@ const MTG = () => {
     <WorkTimelineItem
       period="Февраль 2025 — настоящее время"
       company="Modern Times Group"
-      position="Expert Frontend Developer"
+      position="Senior Frontend Developer"
       logo={<MTGLogo />}
     >
       <TooltipList>
         <TooltipListItem
           text={
             <>
-              Разрабатываю коммерческий продукт для маркетологов
-              <Tooltip
-                title="Платформа для управления маркетинговыми кампаниями и аналитикой в игровой индустрии"
-                arrow
-              >
-                <span className="term">GoGame</span>
-              </Tooltip>
+              Разрабатываю коммерческий продукт для маркетологов в сфере GameDev
               с использованием
               <Tooltip
                 title="Строго типизированный надмножество JavaScript, добавляющий статическую типизацию"
@@ -43,17 +37,23 @@ const MTG = () => {
               >
                 <span className="term">Socket.IO</span>
               </Tooltip>
-              в сфере
-              <Tooltip
-                title="Индустрия разработки виде��игр, включающая создание, проектирование и монетизацию игровых продуктов"
-                arrow
-              >
-                <span className="term">GameDev</span>
-              </Tooltip>
             </>
           }
         />
 
+        <TooltipListItem
+          text={
+            <>
+              Разрабатываю UI интерфейс для чатбота с
+              <Tooltip
+                title="Мультимодальная языковая модель от Google, способная генерировать текст, анализировать изображения и выполнять сложные задачи ИИ"
+                arrow
+              >
+                <span className="term">Gemini AI</span>
+              </Tooltip>
+            </>
+          }
+        />
         <TooltipListItem
           text={
             <>
@@ -86,7 +86,21 @@ const MTG = () => {
               >
                 <span className="term">TypeScript</span>
               </Tooltip>
-              и Vite (SWC)
+              и
+              <Tooltip
+                title="Современный инструмент сборки, предлагающий быструю разработку с горячей перезагрузкой и оптимизированную сборку для продакшена"
+                arrow
+              >
+                <span className="term">Vite</span>
+              </Tooltip>
+              (
+              <Tooltip
+                title="Speedy Web Compiler - быстрая альтернатива Babel для транспиляции JavaScript/TypeScript, написанная на Rust"
+                arrow
+              >
+                <span className="term">SWC</span>
+              </Tooltip>
+              )
             </>
           }
         />
@@ -184,7 +198,14 @@ const MTG = () => {
               >
                 <span className="term">Vault</span>
               </Tooltip>
-              и регистрацию NodeJS микросервисов сервисов через
+              и регистрацию
+              <Tooltip
+                title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8"
+                arrow
+              >
+                <span className="term">NodeJS</span>
+              </Tooltip>
+              микросервисов сервисов через
               <Tooltip
                 title="Механизм для обнаружения и регистрации доступных сервисов в распределенной системе"
                 arrow

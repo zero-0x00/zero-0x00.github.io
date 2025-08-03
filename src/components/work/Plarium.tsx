@@ -16,14 +16,14 @@ const Plarium = () => {
         <TooltipListItem
           text={
             <>
-              Выступил на конференции
+              Спикер конференции{' '}
               <Tooltip
-                title="Крупнейшая JavaScript-��онференция в Украине, объединяющая фронтенд-разработчиков"
+                title="Крупнейшая JavaScript-конференция в Украине, объединяющая фронтенд-разработчиков"
                 arrow
               >
                 <span className="term">KharkivJS</span>
-              </Tooltip>
-              с докладом про UX и UI в веб-приложениях
+              </Tooltip>{' '}
+              по вопросам UX и UI в веб-приложениях.
             </>
           }
         />
@@ -31,16 +31,14 @@ const Plarium = () => {
         <TooltipListItem
           text={
             <>
-              Обеспечил прозрачность трансформации данных в NodeJS API Gateway,
-              создав open-source библиотеку
+              Оптимизировал трансформации данных в NodeJS API Gateway, создав
+              open-source библиотеку
               <Tooltip
                 title="Библиотека для преобразования и фильтрации данных API на лету"
                 arrow
               >
                 <span className="term">apop</span>
               </Tooltip>
-              , которая позволяет легко и быстро преобразовывать данные в нужный
-              формат
             </>
           }
         />
@@ -107,7 +105,7 @@ const Plarium = () => {
               >
                 <span className="term">PWA</span>
               </Tooltip>
-              приложение для управления финансовыми потоками на базе
+              приложение для управления финансовыми документами на базе
               <Tooltip
                 title="JavaScript-библиотека для создания пользовательских интерфейсов"
                 arrow
