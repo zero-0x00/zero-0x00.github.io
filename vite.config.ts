@@ -10,7 +10,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir: '../git initresume-release',
+    outDir: './dist',
     emptyOutDir: true,
   },
 });
