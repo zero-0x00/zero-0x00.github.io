@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import List from '@mui/material/List';
 import { SxProps, Theme } from '@mui/material/styles';
+import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
 
 interface TooltipListProps {
   children: ReactNode;
@@ -8,6 +9,7 @@ interface TooltipListProps {
 }
 
 const TooltipList = ({ children, sx }: TooltipListProps) => {
+  const isPrintMode = useIsPrintMode();
   return (
     <List
       dense
@@ -15,7 +17,7 @@ const TooltipList = ({ children, sx }: TooltipListProps) => {
         listStyleType: 'disc',
         pl: 4,
         '& .term': {
-          borderBottom: '1px dotted',
+          borderBottom: isPrintMode ? 'none' : '1px dotted',
           mx: 0.5,
           display: 'inline-flex',
         },

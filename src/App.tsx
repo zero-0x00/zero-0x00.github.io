@@ -25,8 +25,7 @@ function App() {
 
   useEffect(() => {
     if (isPrintMode) {
-      // window.print();
-      // window.close();
+      window.print();
     }
   }, [isPrintMode]);
 

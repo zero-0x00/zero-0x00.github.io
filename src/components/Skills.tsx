@@ -18,6 +18,7 @@ import {
   categoryOrder,
   skillsByCategory,
 } from './skills/skillsData';
+import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
 
 function Skills() {
   const getCategoryIcon = (category: SkillCategory) => {
@@ -37,6 +38,7 @@ function Skills() {
         return <SpeedIcon fontSize="small" />;
     }
   };
+  const isPrintMode = useIsPrintMode();
 
   return (
     <SectionAccordion title="Навыки" id="skills" defaultExpanded={true}>
@@ -44,7 +46,7 @@ function Skills() {
         {categoryOrder.map(
           (category) =>
             skillsByCategory[category] && (
-              <Box key={category} sx={{ mb: 1 }}>
+              <Box key={category} sx={{ mb: 1 }} className={'section'}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                   <Typography
                     variant="subtitle1"
@@ -53,7 +55,7 @@ function Skills() {
                     {categoryNames[category]}
                   </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0 }}>
                   {skillsByCategory[category].map((skill, index) => (
                     <Tooltip
                       key={index}
@@ -62,10 +64,10 @@ function Skills() {
                     >
                       <Chip
                         label={skill.name}
-                        color={skill.color || 'default'}
+                        color={isPrintMode ? 'default' : skill.color}
                         variant="outlined"
                         avatar={
-                          skill.showIcon ? (
+                          skill.showIcon && !isPrintMode ? (
                             <Avatar sx={{ bgcolor: 'transparent' }}>
                               {getCategoryIcon(skill.category)}
                             </Avatar>

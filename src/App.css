@@ -12,21 +12,27 @@ body {
 .noWrap{
   white-space: nowrap;
 }
+
 @media print {
   html{
     background-color: white!important;
   }
   /* Убираем лишние поля и отступы при печати */
   @page {
-    margin: 0.5cm;
+    margin: 20mm 25mm; /* top/bottom = 10mm, left/right = 15mm */
     size: A4;
+    @top-center {
+      content: "Резюме — Бугай Максим";
+    }
+    @bottom-right {
+      content: "Страница " counter(page);
+    }
   }
 
   /* Установка масштаба и ориентации */
   html, body {
     width: 210mm;
     height: 297mm;
-    margin: 10mm;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }

@@ -31,7 +31,7 @@ const WorkTimelineItem = ({
 }: WorkTimelineItemProps) => {
   const isPrintMode = useIsPrintMode();
   return (
-    <TimelineItem>
+    <TimelineItem className={'section'}>
       {isPrintMode ? (
         <>
           <TimelineContent>
