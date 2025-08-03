@@ -9,4 +9,8 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
+  build: {
+    outDir: '../git initresume-release',
+    emptyOutDir: true,
+  },
 });
