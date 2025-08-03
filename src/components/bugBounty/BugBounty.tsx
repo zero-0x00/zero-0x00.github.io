@@ -1,9 +1,7 @@
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
-import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
-import SecurityIcon from '@mui/icons-material/Security';
 import Link from '@mui/material/Link';
 import SectionAccordion from '../common/SectionAccordion.tsx';
 
@@ -15,15 +13,18 @@ function BugBounty() {
       <Box sx={{ mt: 1 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
           <Typography variant="body1" sx={{ mr: 2 }}>
-            В свободное время участвую в программах по поиску уязвимостей в
-            системах безопасности компаний:
+            <Link
+              href="https://bugbounty.bi.zone/profile/zero-0x00/hackactivity"
+              target={'_blank'}
+            >
+              Профиль на платформе Bug Bounty BI.ZONE
+            </Link>
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
           <Typography variant="body1" sx={{ mr: 2 }}>
-            <Link href="https://bugbounty.bi.zone/profile/zero-0x00/hackactivity">
-              Профиль на платформе Bug Bounty BI.ZONE
-            </Link>
+            В свободное время участвую в программах по поиску уязвимостей в
+            системах безопасности компаний:
           </Typography>
         </Box>
 
@@ -38,11 +39,11 @@ function BugBounty() {
                 label={program.name}
                 color={program.color || 'secondary'}
                 variant="outlined"
-                avatar={
-                  <Avatar sx={{ bgcolor: 'transparent' }}>
-                    <SecurityIcon fontSize="small" />
-                  </Avatar>
-                }
+                // avatar={
+                //   <Avatar sx={{ bgcolor: 'transparent' }}>
+                //     <SecurityIcon fontSize="small" />
+                //   </Avatar>
+                // }
                 sx={{
                   m: 0.5,
                   cursor: 'pointer',

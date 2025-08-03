@@ -30,7 +30,7 @@ const darkPalette = createTheme({
     }),
     secondary: theme.palette.augmentColor({
       color: {
-        main: '#4085F3',
+        main: '#44a5f5',
       },
       name: 'secondary',
     }),
