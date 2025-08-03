@@ -2,15 +2,18 @@ import Tooltip from '@mui/material/Tooltip';
 import TooltipList from '../common/TooltipList';
 import TooltipListItem from '../common/TooltipListItem';
 import WorkTimelineItem from '../common/WorkTimelineItem';
-import MTGLogo from '../../assets/mtg.svg';
+import MTGLogoLight from '../../assets/mtg_light.svg';
+import MTGLogoDark from '../../assets/mtg_dark.svg';
+import { useIsDarkMode } from '../theme/useIsDarkMode.tsx';
 
 const MTG = () => {
+  const isDarkMode = useIsDarkMode();
   return (
     <WorkTimelineItem
       period="Февраль 2025 — настоящее время"
       company="Modern Times Group"
       position="Senior Frontend Developer"
-      logo={<MTGLogo />}
+      logo={isDarkMode ? <MTGLogoDark /> : <MTGLogoLight />}
     >
       <TooltipList>
         <TooltipListItem

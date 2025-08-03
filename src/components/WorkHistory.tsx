@@ -4,15 +4,17 @@ import MTG from './work/MTG.tsx';
 import Plarium from './work/Plarium.tsx';
 import Aristocrat from './work/Aristocrat.tsx';
 import Other from './work/Other.tsx';
+import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
 
 const WorkHistory = () => {
+  const isPrintMode = useIsPrintMode();
   return (
     <SectionAccordion
       title="Опыт работы"
       id="work-history"
       defaultExpanded={true}
     >
-      <Timeline position={'alternate-reverse'}>
+      <Timeline position={isPrintMode ? 'left' : 'alternate-reverse'}>
         <MTG />
         <Aristocrat />
         <Plarium />

@@ -72,6 +72,9 @@ const SectionAccordion = ({
                 outline: 'none',
               },
             },
+            '& .MuiAccordionSummary-content': {
+              margin: '0 !important',
+            },
           }}
         >
           <Typography variant="h5">{title}</Typography>

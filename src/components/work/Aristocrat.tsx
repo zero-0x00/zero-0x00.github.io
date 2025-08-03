@@ -2,15 +2,18 @@ import Tooltip from '@mui/material/Tooltip';
 import TooltipList from '../common/TooltipList';
 import TooltipListItem from '../common/TooltipListItem';
 import WorkTimelineItem from '../common/WorkTimelineItem';
-import AristocratLogo from '../../assets/aristocrat.svg';
+import AristocratLogoLight from '../../assets/aristocrat_light.svg';
+import AristocratLogoDark from '../../assets/aristocrat_dark.svg';
+import { useIsDarkMode } from '../theme/useIsDarkMode.tsx';
 
 const Aristocrat = () => {
+  const isDarkMode = useIsDarkMode();
   return (
     <WorkTimelineItem
       period="Октябрь 2017 — Февраль 2025"
       company="Aristocrat"
       position="Senior Frontend Developer"
-      logo={<AristocratLogo />}
+      logo={isDarkMode ? <AristocratLogoDark /> : <AristocratLogoLight />}
     >
       <TooltipList>
         <TooltipListItem text="Участвовал в разработке системы для создания, управления и анализа рекламных интеграций для мобильные и десктопные игры" />

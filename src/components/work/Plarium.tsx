@@ -2,15 +2,18 @@ import Tooltip from '@mui/material/Tooltip';
 import TooltipList from '../common/TooltipList';
 import TooltipListItem from '../common/TooltipListItem';
 import WorkTimelineItem from '../common/WorkTimelineItem';
-import PlariumLogo from '../../assets/plarium.svg';
+import PlariumLogoLight from '../../assets/plarium_light.svg';
+import PlariumLogoDark from '../../assets/plarium_dark.svg';
+import { useIsDarkMode } from '../theme/useIsDarkMode.tsx';
 
 const Plarium = () => {
+  const isDarkMode = useIsDarkMode();
   return (
     <WorkTimelineItem
       period="Февраль 2016 — Октябрь 2017"
       company="Plarium"
       position="Middle Frontend Developer"
-      logo={<PlariumLogo />}
+      logo={isDarkMode ? <PlariumLogoDark /> : <PlariumLogoLight />}
     >
       <TooltipList>
         <TooltipListItem

@@ -21,8 +21,6 @@
 - Сборка: Vite
 - Деплой: GitHub Pages
 
-Бугай Максим - [marvelsrp@yandex.ru](mailto:marvelsrp@yandex.ru)
-
 ## Благодарности
 
 - [React](https://reactjs.org/) - JavaScript библиотека для создания пользовательских интерфейсов

@@ -3,12 +3,14 @@ import SectionAccordion from './common/SectionAccordion';
 import JuniorSpecialist from './education/juniorSpecialist.tsx';
 import Bachelor from './education/bachelor.tsx';
 import Master from './education/master.tsx';
+import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
 
 const EducationHistory = () => {
+  const isPrintMode = useIsPrintMode();
   return (
     <SectionAccordion title="Образование" id="education" defaultExpanded={true}>
       <Timeline
-        position="alternate-reverse"
+        position={isPrintMode ? 'left' : 'alternate-reverse'}
         sx={{ maxWidth: '900px', margin: '0 auto' }}
       >
         <Master />
