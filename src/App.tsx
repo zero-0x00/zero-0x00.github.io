@@ -16,7 +16,7 @@ console.log(
   'color: #00bfff; font-size: 16px;'
 );
 console.log(
-  '%cЕсли будут вопросы, пиши в Телеграм 👉 @LazyEngineer_0',
+  '%cЕсли будут вопросы, пиши в Телеграм 👉 @Engineer586898',
   'color: #00ffbf; font-weight: bold;'
 );
 
