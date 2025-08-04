@@ -12,63 +12,57 @@ import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
 
 const Bachelor = () => {
   const isPrintMode = useIsPrintMode();
-  return (
+  return isPrintMode ? (
     <TimelineItem className={'section'}>
-      {isPrintMode ? (
-        <>
-          <TimelineContent sx={{ textAlign: 'start' }}>
-            <Card variant="outlined">
-              <CardContent>
-                <Typography
-                  variant={'h5'}
-                  align={'left'}
-                  sx={{ fontWeight: 'bold' }}
-                >
-                  Бакалавр
-                </Typography>
-                <Typography variant={'subtitle2'} align={'left'}>
-                  2012 - 2015
-                </Typography>
-                <Typography variant="body1" color="text.primary">
-                  Прикладная математика и менеджмент, Системный анализ и
-                  управление
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Харьковский национальный университет радиоэлектроники, Харьков
-                </Typography>
-              </CardContent>
-            </Card>
-          </TimelineContent>
-        </>
-      ) : (
-        <>
-          <TimelineOppositeContent color="text.secondary" sx={{ mt: 1.5 }}>
-            2012 - 2015
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color="secondary">
-              <SchoolIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Card variant="outlined">
-              <CardContent>
-                <Typography variant="h6" component="div" fontWeight="bold">
-                  Бакалавр
-                </Typography>
-                <Typography variant="body1" color="text.primary">
-                  Прикладная математика и менеджмент, Системный анализ и
-                  управление
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Харьковский национальный университет радиоэлектроники, Харьков
-                </Typography>
-              </CardContent>
-            </Card>
-          </TimelineContent>
-        </>
-      )}
+      <TimelineContent sx={{ textAlign: 'start' }}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography
+              variant={'h5'}
+              align={'left'}
+              sx={{ fontWeight: 'bold' }}
+            >
+              Бакалавр
+            </Typography>
+            <Typography variant={'subtitle2'} align={'left'}>
+              2012 - 2015
+            </Typography>
+            <Typography variant="body1" color="text.primary">
+              Прикладная математика и менеджмент, Системный анализ и управление
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Харьковский национальный университет радиоэлектроники, Харьков
+            </Typography>
+          </CardContent>
+        </Card>
+      </TimelineContent>
+    </TimelineItem>
+  ) : (
+    <TimelineItem className={'section'}>
+      <TimelineOppositeContent color="text.secondary" sx={{ mt: 1.5 }}>
+        2012 - 2015
+      </TimelineOppositeContent>
+      <TimelineSeparator>
+        <TimelineDot color="secondary">
+          <SchoolIcon />
+        </TimelineDot>
+        <TimelineConnector />
+      </TimelineSeparator>
+      <TimelineContent>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography variant="h6" component="div" fontWeight="bold">
+              Бакалавр
+            </Typography>
+            <Typography variant="body1" color="text.primary">
+              Прикладная математика и менеджмент, Системный анализ и управление
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Харьковский национальный университет радиоэлектроники, Харьков
+            </Typography>
+          </CardContent>
+        </Card>
+      </TimelineContent>
     </TimelineItem>
   );
 };

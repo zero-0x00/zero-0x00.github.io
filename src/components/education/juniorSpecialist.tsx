@@ -12,68 +12,64 @@ import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
 
 const JuniorSpecialist = () => {
   const isPrintMode = useIsPrintMode();
-  return (
+  return isPrintMode ? (
     <TimelineItem className={'section'}>
-      {isPrintMode ? (
-        <>
-          <TimelineContent sx={{ textAlign: 'start' }}>
-            <Card variant="outlined">
-              <CardContent>
-                <Tooltip title="Диплом с отличием" arrow placement={'top'}>
-                  <Typography
-                    variant={'h5'}
-                    align={'left'}
-                    sx={{ fontWeight: 'bold' }}
-                  >
-                    Младший специалист
-                  </Typography>
-                </Tooltip>
-                <Typography variant={'subtitle2'} align={'left'}>
-                  2015 - 2017
-                </Typography>
-                <Typography variant="body1" color="text.primary">
-                  Разработка программного обеспечения
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Криворожский колледж Национального авиационного университета,
-                  Кривой Рог
-                </Typography>
-              </CardContent>
-            </Card>
-          </TimelineContent>
-        </>
-      ) : (
-        <>
-          <TimelineOppositeContent color="text.secondary" sx={{ mt: 1.5 }}>
-            2009 - 2012
-          </TimelineOppositeContent>
-          <TimelineSeparator>
+      <TimelineContent sx={{ textAlign: 'start' }}>
+        <Card variant="outlined">
+          <CardContent>
             <Tooltip title="Диплом с отличием" arrow placement={'top'}>
-              <TimelineDot color="success">
-                <SchoolIcon />
-              </TimelineDot>
+              <Typography
+                variant={'h5'}
+                align={'left'}
+                sx={{ fontWeight: 'bold' }}
+              >
+                Младший специалист
+              </Typography>
             </Tooltip>
-          </TimelineSeparator>
-          <TimelineContent>
-            <Card variant="outlined">
-              <CardContent>
-                <Tooltip title="Диплом с отличием" arrow placement={'top'}>
-                  <Typography variant="h6" component="div" fontWeight="bold">
-                    Младший специалист
-                  </Typography>
-                </Tooltip>
-                <Typography variant="body1" color="text.primary">
-                  Разработка программного обеспечения
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Криворожский колледж Национального авиационного университета,
-                  Кривой Рог
-                </Typography>
-              </CardContent>
-            </Card>
-          </TimelineContent>
-        </>
-      )}
+            <Typography variant={'subtitle2'} align={'left'}>
+              2015 - 2017
+            </Typography>
+            <Typography variant="body1" color="text.primary">
+              Разработка программного обеспечения
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Криворожский колледж Национального авиационного университета,
+              Кривой Рог
+            </Typography>
+          </CardContent>
+        </Card>
+      </TimelineContent>
+    </TimelineItem>
+  ) : (
+    <TimelineItem className={'section'}>
+      <TimelineOppositeContent color="text.secondary" sx={{ mt: 1.5 }}>
+        2009 - 2012
+      </TimelineOppositeContent>
+      <TimelineSeparator>
+        <Tooltip title="Диплом с отличием" arrow placement={'top'}>
+          <TimelineDot color="success">
+            <SchoolIcon />
+          </TimelineDot>
+        </Tooltip>
+      </TimelineSeparator>
+      <TimelineContent>
+        <Card variant="outlined">
+          <CardContent>
+            <Tooltip title="Диплом с отличием" arrow placement={'top'}>
+              <Typography variant="h6" component="div" fontWeight="bold">
+                Младший специалист
+              </Typography>
+            </Tooltip>
+            <Typography variant="body1" color="text.primary">
+              Разработка программного обеспечения
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Криворожский колледж Национального авиационного университета,
+              Кривой Рог
+            </Typography>
+          </CardContent>
+        </Card>
+      </TimelineContent>
     </TimelineItem>
   );
 };
