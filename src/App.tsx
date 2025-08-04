@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
 import PrintIcon from '@mui/icons-material/Print';
 import { useIsPrintMode } from './hooks/useIsPrintMode.tsx';
+import { useIsMobile } from './hooks/useIsMobile.tsx';
 
 console.log(
   '%cПривет, исследователь 👋\nПоймал тебя за инспектором кода 😏\nЭтот сайт — моё резюме. Если ты здесь, скорее всего, тебя заставил HR исследовать, как он устроен 😎\nЛюблю, когда люди копаются под капотом. Исходники можешь найти тут: https://github.com/zero-0x00/zero-0x00.github.io.',
@@ -22,7 +23,7 @@ console.log(
 
 function App() {
   const isPrintMode = useIsPrintMode();
-
+  const isMobile = useIsMobile();
   useEffect(() => {
     if (isPrintMode) {
       window.print();
@@ -34,34 +35,37 @@ function App() {
     window.open(`${currentUrl}?print`, '_blank');
   };
 
+  const isStandardView = !isPrintMode && !isMobile;
   return (
-    <Container
-      maxWidth="md"
-      className={isPrintMode ? 'print-container' : ''}
-      sx={{ mt: 1, mb: 4 }}
-    >
-      {!isPrintMode && (
-        <Fab
-          size="small"
-          color="primary"
-          aria-label="print"
-          onClick={handlePrint}
-          sx={{
-            position: 'fixed',
-            right: '16px',
-            top: '16px',
-          }}
-        >
-          <PrintIcon />
-        </Fab>
-      )}
+    <div className={isMobile ? 'mobile' : ''}>
+      <Container
+        maxWidth="md"
+        className={isPrintMode ? 'print-container' : ''}
+        sx={{ mt: 1, mb: 4 }}
+      >
+        {isStandardView && (
+          <Fab
+            size="small"
+            color="primary"
+            aria-label="print"
+            onClick={handlePrint}
+            sx={{
+              position: 'fixed',
+              right: '16px',
+              top: '16px',
+            }}
+          >
+            <PrintIcon />
+          </Fab>
+        )}
 
-      <Header />
-      <Skills />
-      <WordHistory />
-      <EducationHistory />
-      <BugBounty />
-    </Container>
+        <Header />
+        <Skills />
+        <WordHistory />
+        <EducationHistory />
+        <BugBounty />
+      </Container>
+    </div>
   );
 }
 

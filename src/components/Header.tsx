@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import avatarImage from '../assets/avatar.jpg';
 import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
+import { useIsMobile } from '../hooks/useIsMobile.tsx';
 
 const HeaderGrid = styled(Grid)(() => ({
   '@media print': {
@@ -20,6 +21,7 @@ const HeaderGrid = styled(Grid)(() => ({
 
 function Header() {
   const isPrintMode = useIsPrintMode();
+  const isMobile = useIsMobile();
   return (
     <>
       <Grid className={'print'}>
@@ -31,19 +33,26 @@ function Header() {
         </Typography>
       </Grid>
       <Grid container spacing={isPrintMode ? 0 : 2} sx={{ my: 2 }}>
-        <HeaderGrid size={5} container>
+        <HeaderGrid size={{ xs: 12, md: 5 }} container>
           <Grid
-            size={5}
+            size={{ xs: 4, md: 5 }}
             sx={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}
           >
-            <Avatar src={avatarImage} sx={{ width: 128, height: 128 }} />
+            <Avatar
+              src={avatarImage}
+              sx={
+                isMobile
+                  ? { width: 96, height: 96 }
+                  : { width: 128, height: 128 }
+              }
+            />
           </Grid>
           <Grid
-            size={7}
+            size={{ xs: 8, md: 7 }}
             container
             direction={'column'}
             justifyContent={'center'}
@@ -55,7 +64,7 @@ function Header() {
             <Typography variant={'h5'}>Senior Frontend Developer</Typography>
           </Grid>
         </HeaderGrid>
-        <Grid container size={7} spacing={isPrintMode ? 1 : 2}>
+        <Grid container size={{ xs: 12, md: 7 }} spacing={isPrintMode ? 1 : 2}>
           <Grid container size={12}>
             <Grid size={6}>
               <ListItem sx={{ py: 0 }}>
@@ -65,7 +74,11 @@ function Header() {
                   secondary={
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                       <Link href="tel:+79180584679" color="inherit">
-                        <Typography variant={'body2'} color={'text.secondary'}>
+                        <Typography
+                          variant={'body2'}
+                          color={'text.secondary'}
+                          sx={{ textWrap: 'nowrap' }}
+                        >
                           +7 (918) 058-46-79
                         </Typography>
                       </Link>
@@ -141,7 +154,7 @@ function Header() {
               <ListItem sx={{ py: 0 }}>
                 <ListItemText
                   primary="Гражданство"
-                  secondary="Российская федерация"
+                  secondary="Российская Федерация"
                 />
               </ListItem>
             </Grid>

@@ -11,6 +11,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
+import { useIsMobile } from '../../hooks/useIsMobile.tsx';
 
 interface WorkTimelineItemProps {
   period: string;
@@ -30,7 +31,9 @@ const WorkTimelineItem = ({
   isLast = false,
 }: WorkTimelineItemProps) => {
   const isPrintMode = useIsPrintMode();
-  return isPrintMode ? (
+  const isMobile = useIsMobile();
+
+  return isMobile || isPrintMode ? (
     <TimelineItem className={'section'}>
       <TimelineContent>
         <Card variant="outlined" sx={{ mb: 3 }}>

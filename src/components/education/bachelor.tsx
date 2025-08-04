@@ -9,10 +9,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import SchoolIcon from '@mui/icons-material/School';
 import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
+import { useIsMobile } from '../../hooks/useIsMobile.tsx';
 
 const Bachelor = () => {
   const isPrintMode = useIsPrintMode();
-  return isPrintMode ? (
+  const isMobile = useIsMobile();
+  return isMobile || isPrintMode ? (
     <TimelineItem className={'section'}>
       <TimelineContent sx={{ textAlign: 'start' }}>
         <Card variant="outlined">

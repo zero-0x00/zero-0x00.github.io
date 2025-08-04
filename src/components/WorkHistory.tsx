@@ -5,9 +5,11 @@ import Plarium from './work/Plarium.tsx';
 import Aristocrat from './work/Aristocrat.tsx';
 import Other from './work/Other.tsx';
 import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
+import { useIsMobile } from '../hooks/useIsMobile.tsx';
 
 const WorkHistory = () => {
   const isPrintMode = useIsPrintMode();
+  const isMobile = useIsMobile();
   return (
     <SectionAccordion
       title="Опыт работы"
@@ -15,7 +17,9 @@ const WorkHistory = () => {
       defaultExpanded={true}
       className={'section'}
     >
-      <Timeline position={isPrintMode ? 'left' : 'alternate-reverse'}>
+      <Timeline
+        position={isMobile || isPrintMode ? 'left' : 'alternate-reverse'}
+      >
         <MTG />
         <Aristocrat />
         <Plarium />
