@@ -12,22 +12,30 @@ body {
 .noWrap{
   white-space: nowrap;
 }
+.print{
+  display: none;
+}
+
+/* Убираем лишние поля и отступы при печати */
+@page {
+  margin: 10mm 15mm;
+  size: A4;
+  @top-center {
+    content: "Резюме — Бугай Максим";
+  }
+  @bottom-right {
+    content: "Страница " counter(page);
+  }
+}
 
 @media print {
+  .print{
+    display: block;
+  }
   html{
     background-color: white!important;
   }
-  /* Убираем лишние поля и отступы при печати */
-  @page {
-    margin: 20mm 25mm; /* top/bottom = 10mm, left/right = 15mm */
-    size: A4;
-    @top-center {
-      content: "Резюме — Бугай Максим";
-    }
-    @bottom-right {
-      content: "Страница " counter(page);
-    }
-  }
+
 
   /* Установка масштаба и ориентации */
   html, body {
@@ -56,18 +64,18 @@ body {
     margin-bottom: 0;
   }
   .section {
-    page-break-inside: avoid;
+    break-inside: avoid;
   }
   .chapter {
-    page-break-before: always;
+    break-inside: always;
   }
   p {
-    page-break-inside: auto;
-    page-break-before: auto;
-    page-break-after: auto;
+    break-inside: auto;
+    break-before: auto;
+    break-after: auto;
   }
   h2, h3 {
-    page-break-after: avoid;
+    break-after: avoid;
   }
 
   /* Оптимизация сеток MUI */
@@ -120,4 +128,16 @@ body {
   .MuiSvgIcon-root {
     fill: #000 !important;
   }
+  button.MuiTypography-root{
+    color: black;
+  }
+
+  .MuiListItemText-root{
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    .MuiTypography-root{
+      line-height: 1 !important;
+    }
+  }
+
 }

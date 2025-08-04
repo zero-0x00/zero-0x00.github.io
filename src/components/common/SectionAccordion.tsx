@@ -11,6 +11,7 @@ interface SectionAccordionProps {
   children: ReactNode;
   defaultExpanded?: boolean;
   id: string;
+  className?: string;
 }
 
 const SectionAccordion = ({
@@ -18,6 +19,7 @@ const SectionAccordion = ({
   children,
   defaultExpanded = false,
   id,
+  className,
 }: SectionAccordionProps) => {
   const [expanded, setExpanded] = useState<boolean>(defaultExpanded);
 
@@ -26,7 +28,7 @@ const SectionAccordion = ({
   };
 
   return (
-    <Box sx={{ mb: 3 }}>
+    <Box sx={{ mb: 3 }} className={className}>
       <Accordion
         expanded={expanded}
         onChange={handleChange}

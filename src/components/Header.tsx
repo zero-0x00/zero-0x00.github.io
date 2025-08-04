@@ -21,121 +21,134 @@ const HeaderGrid = styled(Grid)(() => ({
 function Header() {
   const isPrintMode = useIsPrintMode();
   return (
-    <Grid container spacing={isPrintMode ? 0 : 2} sx={{ my: 2 }}>
-      <HeaderGrid size={5} container>
-        <Grid
-          size={5}
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Avatar src={avatarImage} sx={{ width: 128, height: 128 }} />
-        </Grid>
-        <Grid
-          size={7}
-          container
-          direction={'column'}
-          justifyContent={'center'}
-          sx={{ px: 2 }}
-          spacing={isPrintMode ? 1 : 2}
-        >
-          <Typography variant={'h6'}>Резюме</Typography>
-          <Typography variant={'h4'}>Максим Бугай</Typography>
-          <Typography variant={'h5'}>Senior Frontend Developer</Typography>
-        </Grid>
-      </HeaderGrid>
-      <Grid container size={7} spacing={isPrintMode ? 1 : 2}>
-        <Grid container size={12}>
-          <Grid size={6}>
-            <ListItem sx={{ py: 0 }}>
-              <ListItemText
-                primary="Телефон"
-                disableTypography={true}
-                secondary={
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <Link href="tel:+79180584679" color="inherit">
-                      <Typography variant={'body2'} color={'text.secondary'}>
-                        +7 (918) 058-46-79
-                      </Typography>
+    <>
+      <Grid className={'print'}>
+        <Typography variant="body2" align={'center'}>
+          Интерактивная версия резюме:&nbsp;
+          <Link href={'https://zero-0x00.github.io/'} variant="body2">
+            https://zero-0x00.github.io/
+          </Link>
+        </Typography>
+      </Grid>
+      <Grid container spacing={isPrintMode ? 0 : 2} sx={{ my: 2 }}>
+        <HeaderGrid size={5} container>
+          <Grid
+            size={5}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Avatar src={avatarImage} sx={{ width: 128, height: 128 }} />
+          </Grid>
+          <Grid
+            size={7}
+            container
+            direction={'column'}
+            justifyContent={'center'}
+            sx={{ px: 2 }}
+            spacing={isPrintMode ? 1 : 2}
+          >
+            <Typography variant={'h6'}>Резюме</Typography>
+            <Typography variant={'h4'}>Максим Бугай</Typography>
+            <Typography variant={'h5'}>Senior Frontend Developer</Typography>
+          </Grid>
+        </HeaderGrid>
+        <Grid container size={7} spacing={isPrintMode ? 1 : 2}>
+          <Grid container size={12}>
+            <Grid size={6}>
+              <ListItem sx={{ py: 0 }}>
+                <ListItemText
+                  primary="Телефон"
+                  disableTypography={true}
+                  secondary={
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                      <Link href="tel:+79180584679" color="inherit">
+                        <Typography variant={'body2'} color={'text.secondary'}>
+                          +7 (918) 058-46-79
+                        </Typography>
+                      </Link>
+                      <Link
+                        href="https://t.me/LazyEngineer_0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        color="inherit"
+                        aria-label="Telegram"
+                      >
+                        <TelegramIcon fontSize="small" />
+                      </Link>
+                      <Link
+                        href="https://wa.me/79180584679"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        color="inherit"
+                        aria-label="WhatsApp"
+                      >
+                        <WhatsAppIcon fontSize="small" />
+                      </Link>
+                    </Box>
+                  }
+                />
+              </ListItem>
+            </Grid>
+            <Grid size={6}>
+              <ListItem sx={{ py: 0 }}>
+                <ListItemText
+                  primary="Проживание"
+                  secondary={
+                    <>
+                      <span className={'noWrap'}>Московская область, </span>{' '}
+                      <span className={'noWrap'}>г.о. Красногорск</span>
+                    </>
+                  }
+                />
+              </ListItem>
+            </Grid>
+          </Grid>
+          <Grid container size={12}>
+            <Grid size={6}>
+              <ListItem sx={{ py: 0 }}>
+                <ListItemText
+                  primary="Email"
+                  secondary={
+                    <Link href="mailto:marvelsrp@yandex.ru" color="inherit">
+                      marvelsrp@yandex.ru
                     </Link>
-                    <Link
-                      href="https://t.me/LazyEngineer_0"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      color="inherit"
-                      aria-label="Telegram"
-                    >
-                      <TelegramIcon fontSize="small" />
-                    </Link>
-                    <Link
-                      href="https://wa.me/79180584679"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      color="inherit"
-                      aria-label="WhatsApp"
-                    >
-                      <WhatsAppIcon fontSize="small" />
-                    </Link>
-                  </Box>
-                }
-              />
-            </ListItem>
+                  }
+                />
+              </ListItem>
+            </Grid>
+            <Grid size={6}>
+              <ListItem sx={{ py: 0 }}>
+                <ListItemText
+                  primary="Формат работы"
+                  secondary="Полная занятость, Гибрид, Удаленно."
+                />
+              </ListItem>
+            </Grid>
           </Grid>
-          <Grid size={6}>
-            <ListItem sx={{ py: 0 }}>
-              <ListItemText
-                primary="Проживание"
-                secondary={
-                  <>
-                    <span className={'noWrap'}>Московская область, </span>{' '}
-                    <span className={'noWrap'}>г.о. Красногорск</span>
-                  </>
-                }
-              />
-            </ListItem>
-          </Grid>
-        </Grid>
-        <Grid container size={12}>
-          <Grid size={6}>
-            <ListItem sx={{ py: 0 }}>
-              <ListItemText
-                primary="Email"
-                secondary={
-                  <Link href="mailto:marvelsrp@yandex.ru" color="inherit">
-                    marvelsrp@yandex.ru
-                  </Link>
-                }
-              />
-            </ListItem>
-          </Grid>
-          <Grid size={6}>
-            <ListItem sx={{ py: 0 }}>
-              <ListItemText
-                primary="Формат работы"
-                secondary="Полная занятость, Гибрид, Удаленно."
-              />
-            </ListItem>
-          </Grid>
-        </Grid>
-        <Grid container size={12}>
-          <Grid size={6}>
-            <ListItem sx={{ py: 0 }}>
-              <ListItemText primary="На позиции Frontend" secondary="11 лет" />
-            </ListItem>
-          </Grid>
-          <Grid size={6}>
-            <ListItem sx={{ py: 0 }}>
-              <ListItemText
-                primary="Гражданство"
-                secondary="Российская федерация"
-              />
-            </ListItem>
+          <Grid container size={12}>
+            <Grid size={6}>
+              <ListItem sx={{ py: 0 }}>
+                <ListItemText
+                  primary="На позиции Frontend"
+                  secondary="11 лет"
+                />
+              </ListItem>
+            </Grid>
+            <Grid size={6}>
+              <ListItem sx={{ py: 0 }}>
+                <ListItemText
+                  primary="Гражданство"
+                  secondary="Российская федерация"
+                />
+              </ListItem>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 }
 

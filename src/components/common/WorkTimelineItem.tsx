@@ -30,87 +30,83 @@ const WorkTimelineItem = ({
   isLast = false,
 }: WorkTimelineItemProps) => {
   const isPrintMode = useIsPrintMode();
-  return (
+  return isPrintMode ? (
     <TimelineItem className={'section'}>
-      {isPrintMode ? (
-        <>
-          <TimelineContent>
-            <Card variant="outlined" sx={{ mb: 3 }}>
-              <CardContent>
-                <Grid
-                  sx={{
-                    justifyContent: 'space-between',
-                    display: 'flex',
-                  }}
+      <TimelineContent>
+        <Card variant="outlined" sx={{ mb: 3 }}>
+          <CardContent>
+            <Grid
+              sx={{
+                justifyContent: 'space-between',
+                display: 'flex',
+              }}
+            >
+              <Grid
+                size={10}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                <Typography
+                  variant={'h5'}
+                  align={'left'}
+                  sx={{ fontWeight: 'bold' }}
                 >
-                  <Grid
-                    size={10}
-                    sx={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                    }}
-                  >
-                    <Typography
-                      variant={'h5'}
-                      align={'left'}
-                      sx={{ fontWeight: 'bold' }}
-                    >
-                      {company}
-                    </Typography>
-                    <Typography variant={'subtitle2'} align={'left'}>
-                      {period}
-                    </Typography>
-                    <Typography
-                      variant={'subtitle2'}
-                      align={'left'}
-                      sx={{ fontStyle: 'italic' }}
-                    >
-                      {position}
-                    </Typography>
-                  </Grid>
-                  <Grid size={2}>{logo}</Grid>
-                </Grid>
-                {children}
-              </CardContent>
-            </Card>
-          </TimelineContent>
-        </>
-      ) : (
-        <>
-          <TimelineOppositeContent color="text.secondary" sx={{ mt: 0.75 }}>
-            {period}
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            {logo}
-            {!isLast && <TimelineConnector />}
-          </TimelineSeparator>
-          <TimelineContent>
-            <Card variant="outlined" sx={{ mb: 3 }}>
-              <CardContent>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'flex-start',
-                    mb: 2,
-                    ml: 2,
-                  }}
+                  {company}
+                </Typography>
+                <Typography variant={'subtitle2'} align={'left'}>
+                  {period}
+                </Typography>
+                <Typography
+                  variant={'subtitle2'}
+                  align={'left'}
+                  sx={{ fontStyle: 'italic' }}
                 >
-                  <Typography
-                    variant="h6"
-                    component="div"
-                    sx={{ fontWeight: 'bold' }}
-                  >
-                    {company}
-                  </Typography>
-                  <Chip label={position} color="primary" variant="outlined" />
-                </Box>
-                {children}
-              </CardContent>
-            </Card>
-          </TimelineContent>
-        </>
-      )}
+                  {position}
+                </Typography>
+              </Grid>
+              <Grid size={2}>{logo}</Grid>
+            </Grid>
+            {children}
+          </CardContent>
+        </Card>
+      </TimelineContent>
+    </TimelineItem>
+  ) : (
+    <TimelineItem className={'section'}>
+      <TimelineOppositeContent color="text.secondary" sx={{ mt: 0.75 }}>
+        {period}
+      </TimelineOppositeContent>
+      <TimelineSeparator>
+        {logo}
+        {!isLast && <TimelineConnector />}
+      </TimelineSeparator>
+      <TimelineContent>
+        <Card variant="outlined" sx={{ mb: 3 }}>
+          <CardContent>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'flex-start',
+                mb: 2,
+                ml: 2,
+              }}
+            >
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ fontWeight: 'bold' }}
+              >
+                {company}
+              </Typography>
+              <Chip label={position} color="primary" variant="outlined" />
+            </Box>
+            {children}
+          </CardContent>
+        </Card>
+      </TimelineContent>
     </TimelineItem>
   );
 };

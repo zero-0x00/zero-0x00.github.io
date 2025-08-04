@@ -13,6 +13,7 @@ const WorkHistory = () => {
       title="Опыт работы"
       id="work-history"
       defaultExpanded={true}
+      className={'section'}
     >
       <Timeline position={isPrintMode ? 'left' : 'alternate-reverse'}>
         <MTG />

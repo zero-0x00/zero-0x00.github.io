@@ -8,7 +8,12 @@ import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
 const EducationHistory = () => {
   const isPrintMode = useIsPrintMode();
   return (
-    <SectionAccordion title="Образование" id="education" defaultExpanded={true}>
+    <SectionAccordion
+      title="Образование"
+      id="education"
+      defaultExpanded={true}
+      className={'section'}
+    >
       <Timeline
         position={isPrintMode ? 'left' : 'alternate-reverse'}
         sx={{ maxWidth: '900px', margin: '0 auto' }}

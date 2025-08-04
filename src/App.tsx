@@ -35,7 +35,11 @@ function App() {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ mt: 1, mb: 4 }}>
+    <Container
+      maxWidth="md"
+      className={isPrintMode ? 'print-container' : ''}
+      sx={{ mt: 1, mb: 4 }}
+    >
       {!isPrintMode && (
         <Fab
           size="small"
@@ -53,9 +57,9 @@ function App() {
       )}
 
       <Header />
+      <Skills />
       <WordHistory />
       <EducationHistory />
-      <Skills />
       <BugBounty />
     </Container>
   );
