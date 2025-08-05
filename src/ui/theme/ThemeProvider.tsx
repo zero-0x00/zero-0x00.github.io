@@ -1,12 +1,15 @@
 import { useState, ReactNode } from 'react';
-import { lightPalette, darkPalette } from './theme.ts';
-import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
+
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Fab from '@mui/material/Fab';
-import { ThemeContext } from './ThemeContext';
-import { useIsMobile } from '../../hooks/useIsMobile.tsx';
-import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
+import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
+
+import { useIsMobile } from '@hooks/useIsMobile.tsx';
+import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
+
+import { ThemeContext } from './ThemeContext.tsx';
+import { lightPalette, darkPalette } from './theme.ts';
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {

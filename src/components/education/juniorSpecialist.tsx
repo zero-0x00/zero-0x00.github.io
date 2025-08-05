@@ -1,15 +1,16 @@
-import Typography from '@mui/material/Typography';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import SchoolIcon from '@mui/icons-material/School';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import SchoolIcon from '@mui/icons-material/School';
-import Tooltip from '@mui/material/Tooltip';
-import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
-import { useIsMobile } from '../../hooks/useIsMobile.tsx';
+import Typography from '@mui/material/Typography';
+
+import { useIsMobile } from '@hooks/useIsMobile';
+import { useIsPrintMode } from '@hooks/useIsPrintMode';
+import CustomTooltip from '@ui/CustomTooltip';
 
 const JuniorSpecialist = () => {
   const isPrintMode = useIsPrintMode();
@@ -19,7 +20,7 @@ const JuniorSpecialist = () => {
       <TimelineContent sx={{ textAlign: 'start' }}>
         <Card variant="outlined">
           <CardContent>
-            <Tooltip title="Диплом с отличием" arrow placement={'top'}>
+            <CustomTooltip title="Диплом с отличием" placement={'top'}>
               <Typography
                 variant={'h5'}
                 align={'left'}
@@ -27,7 +28,7 @@ const JuniorSpecialist = () => {
               >
                 Младший специалист
               </Typography>
-            </Tooltip>
+            </CustomTooltip>
             <Typography variant={'subtitle2'} align={'left'}>
               2015 - 2017
             </Typography>
@@ -48,20 +49,20 @@ const JuniorSpecialist = () => {
         2009 - 2012
       </TimelineOppositeContent>
       <TimelineSeparator>
-        <Tooltip title="Диплом с отличием" arrow placement={'top'}>
+        <CustomTooltip title="Диплом с отличием" placement={'top'}>
           <TimelineDot color="success">
             <SchoolIcon />
           </TimelineDot>
-        </Tooltip>
+        </CustomTooltip>
       </TimelineSeparator>
       <TimelineContent>
         <Card variant="outlined">
           <CardContent>
-            <Tooltip title="Диплом с отличием" arrow placement={'top'}>
+            <CustomTooltip title="Диплом с отличием" placement={'top'}>
               <Typography variant="h6" component="div" fontWeight="bold">
                 Младший специалист
               </Typography>
-            </Tooltip>
+            </CustomTooltip>
             <Typography variant="body1" color="text.primary">
               Разработка программного обеспечения
             </Typography>

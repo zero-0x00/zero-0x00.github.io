@@ -1,5 +1,5 @@
-import '@mui/material/styles';
 import '@mui/material/Chip';
+import '@mui/material/styles';
 
 declare module '@mui/material/styles' {
   interface Palette {

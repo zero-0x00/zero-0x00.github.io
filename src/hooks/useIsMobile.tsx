@@ -1,7 +1,7 @@
 /**
- * Хук для определения мобильного устройства и ориентации экрана
- * @param breakpoint - ширина экрана в пикселях, при которой устройство считается мобильным (по умолчанию 1024px)
- * @returns {Object} - объект с флагами isMobile и isLandscape
+ * Hook for detecting mobile device and screen orientation
+ * @param breakpoint - screen width in pixels at which the device is considered mobile (default: 1024px)
+ * @returns {Object} - object with isMobile and isLandscape flags
  */
 export const useIsMobile = (breakpoint = 1024) => {
   const isMobileByAgent =

@@ -1,16 +1,18 @@
 import { useEffect } from 'react';
 
-import './App.css';
-import Header from './components/Header.tsx';
-import WordHistory from './components/WorkHistory.tsx';
-import EducationHistory from './components/EducationHistory.tsx';
-import Skills from './components/Skills.tsx';
-import BugBounty from './components/bugBounty/BugBounty.tsx';
+import PrintIcon from '@mui/icons-material/Print';
 import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
-import PrintIcon from '@mui/icons-material/Print';
-import { useIsPrintMode } from './hooks/useIsPrintMode.tsx';
-import { useIsMobile } from './hooks/useIsMobile.tsx';
+
+import EducationHistory from '@components/EducationHistory.tsx';
+import Header from '@components/Header.tsx';
+import Skills from '@components/Skills.tsx';
+import WordHistory from '@components/WorkHistory.tsx';
+import BugBounty from '@components/bugBounty/BugBounty.tsx';
+import { useIsMobile } from '@hooks/useIsMobile.tsx';
+import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
+
+import './App.css';
 
 console.log(
   '%cПривет, исследователь 👋\nПоймал тебя за инспектором кода 😏\nЭтот сайт — моё резюме. Если ты здесь, скорее всего, тебя заставил HR исследовать, как он устроен 😎\nЛюблю, когда люди копаются под капотом. Исходники можешь найти тут: https://github.com/zero-0x00/zero-0x00.github.io.',

@@ -1,11 +1,12 @@
 import Timeline from '@mui/lab/Timeline';
-import SectionAccordion from './common/SectionAccordion';
-import MTG from './work/MTG.tsx';
-import Plarium from './work/Plarium.tsx';
-import Aristocrat from './work/Aristocrat.tsx';
-import Other from './work/Other.tsx';
-import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
-import { useIsMobile } from '../hooks/useIsMobile.tsx';
+
+import MTG from '@components//work/MTG';
+import Aristocrat from '@components/work/Aristocrat';
+import Other from '@components/work/Other';
+import Plarium from '@components/work/Plarium';
+import { useIsMobile } from '@hooks/useIsMobile';
+import { useIsPrintMode } from '@hooks/useIsPrintMode';
+import SectionAccordion from '@ui/SectionAccordion';
 
 const WorkHistory = () => {
   const isPrintMode = useIsPrintMode();

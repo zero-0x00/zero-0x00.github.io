@@ -1,16 +1,17 @@
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import Avatar from '@mui/material/Avatar';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import Link from '@mui/material/Link';
+import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-import avatarImage from '../assets/avatar.jpg';
-import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
-import { useIsMobile } from '../hooks/useIsMobile.tsx';
+
+import avatarImage from '@assets/avatar.jpg';
+import { useIsMobile } from '@hooks/useIsMobile.tsx';
+import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
 
 const HeaderGrid = styled(Grid)(() => ({
   '@media print': {

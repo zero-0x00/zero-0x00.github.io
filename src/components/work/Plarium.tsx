@@ -1,10 +1,10 @@
-import Tooltip from '@mui/material/Tooltip';
-import TooltipList from '../common/TooltipList';
-import TooltipListItem from '../common/TooltipListItem';
-import WorkTimelineItem from '../common/WorkTimelineItem';
-import PlariumLogoLight from '../../assets/plarium_light.svg';
-import PlariumLogoDark from '../../assets/plarium_dark.svg';
-import { useIsDarkMode } from '../theme/useIsDarkMode.tsx';
+import PlariumLogoDark from '@assets/plarium_dark.svg';
+import PlariumLogoLight from '@assets/plarium_light.svg';
+import CustomTooltip from '@ui/CustomTooltip';
+import TooltipList from '@ui/TooltipList';
+import TooltipListItem from '@ui/TooltipListItem';
+import WorkTimelineItem from '@ui/WorkTimelineItem';
+import { useIsDarkMode } from '@ui/theme/useIsDarkMode';
 
 const Plarium = () => {
   const isDarkMode = useIsDarkMode();
@@ -20,12 +20,9 @@ const Plarium = () => {
           text={
             <>
               Спикер конференции{' '}
-              <Tooltip
-                title="Крупнейшая JavaScript-конференция в Украине, объединяющая фронтенд-разработчиков"
-                arrow
-              >
+              <CustomTooltip title="Крупнейшая JavaScript-конференция в Украине, объединяющая фронтенд-разработчиков">
                 <span className="term">KharkivJS</span>
-              </Tooltip>{' '}
+              </CustomTooltip>{' '}
               по вопросам UX и UI в веб-приложениях.
             </>
           }
@@ -36,12 +33,9 @@ const Plarium = () => {
             <>
               Оптимизировал трансформации данных в NodeJS API Gateway, создав
               open-source библиотеку
-              <Tooltip
-                title="Библиотека для преобразования и фильтрации данных API на лету"
-                arrow
-              >
+              <CustomTooltip title="Библиотека для преобразования и фильтрации данных API на лету">
                 <span className="term">apop</span>
-              </Tooltip>
+              </CustomTooltip>
             </>
           }
         />
@@ -53,19 +47,13 @@ const Plarium = () => {
             <>
               Участвовал в разработке проекта для аналитики маркетинговых
               кампаний, используя
-              <Tooltip
-                title="Инструмент для быстрого создания React-приложений без необходимости настройки окружения"
-                arrow
-              >
+              <CustomTooltip title="Инструмент для быстрого создания React-приложений без необходимости настройки окружения">
                 <span className="term">Create React App</span>
-              </Tooltip>
+              </CustomTooltip>
               и
-              <Tooltip
-                title="Сборщик модулей JavaScript, который создает бандлы для веб-приложений"
-                arrow
-              >
+              <CustomTooltip title="Сборщик модулей JavaScript, который создает бандлы для веб-приложений">
                 <span className="term">Webpack</span>
-              </Tooltip>
+              </CustomTooltip>
             </>
           }
         />
@@ -74,25 +62,16 @@ const Plarium = () => {
           text={
             <>
               Внедрил в команду принципы
-              <Tooltip
-                title="You Aren't Gonna Need It - Не создавайте функциональность заранее, пока она не нужна"
-                arrow
-              >
+              <CustomTooltip title="You Aren't Gonna Need It - Не создавайте функциональность заранее, пока она не нужна">
                 <span className="term">YAGNI</span>
-              </Tooltip>
-              <Tooltip
-                title="Don't Repeat Yourself - Избегайте дублирования кода, выделяйте повторяющиеся части в отдельные компоненты"
-                arrow
-              >
+              </CustomTooltip>
+              <CustomTooltip title="Don't Repeat Yourself - Избегайте дублирования кода, выделяйте повторяющиеся части в отдельные компоненты">
                 <span className="term">DRY</span>
-              </Tooltip>
+              </CustomTooltip>
               и
-              <Tooltip
-                title="Keep It Simple, Stupid - Сохраняйте простоту и избегайте лишней сложности"
-                arrow
-              >
+              <CustomTooltip title="Keep It Simple, Stupid - Сохраняйте простоту и избегайте лишней сложности">
                 <span className="term">KISS</span>
-              </Tooltip>
+              </CustomTooltip>
               . Очистил сложно-читаемый Legacy код из бизнес логики.
             </>
           }
@@ -102,19 +81,13 @@ const Plarium = () => {
           text={
             <>
               Разработал
-              <Tooltip
-                title="Progressive Web App - веб-приложение, которое работает как нативное мобильное приложение с возможностью офлайн-работы"
-                arrow
-              >
+              <CustomTooltip title="Progressive Web App - веб-приложение, которое работает как нативное мобильное приложение с возможностью офлайн-работы">
                 <span className="term">PWA</span>
-              </Tooltip>
+              </CustomTooltip>
               приложение для управления финансовыми документами на базе
-              <Tooltip
-                title="JavaScript-библиотека для создания пользовательских интерфейсов"
-                arrow
-              >
+              <CustomTooltip title="JavaScript-библиотека для создания пользовательских интерфейсов">
                 <span className="term">React</span>
-              </Tooltip>
+              </CustomTooltip>
             </>
           }
         />

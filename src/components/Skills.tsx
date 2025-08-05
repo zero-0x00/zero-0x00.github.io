@@ -1,24 +1,25 @@
+import ArchitectureIcon from '@mui/icons-material/Architecture';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import CodeIcon from '@mui/icons-material/Code';
+import SettingsIcon from '@mui/icons-material/Settings';
+import SpeedIcon from '@mui/icons-material/Speed';
+import StorageIcon from '@mui/icons-material/Storage';
+import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
-import CodeIcon from '@mui/icons-material/Code';
-import SettingsIcon from '@mui/icons-material/Settings';
-import StorageIcon from '@mui/icons-material/Storage';
-import SpeedIcon from '@mui/icons-material/Speed';
-import ArchitectureIcon from '@mui/icons-material/Architecture';
-import BugReportIcon from '@mui/icons-material/BugReport';
-import Avatar from '@mui/material/Avatar';
-import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
-import SectionAccordion from './common/SectionAccordion';
 
-import { SkillCategory } from './skills/types';
+import { useIsPrintMode } from '@hooks/useIsPrintMode';
+import CustomTooltip from '@ui/CustomTooltip';
+import SectionAccordion from '@ui/SectionAccordion';
+
 import {
   categoryNames,
   categoryOrder,
   skillsByCategory,
 } from './skills/skillsData';
-import { useIsPrintMode } from '../hooks/useIsPrintMode.tsx';
+import { SkillCategory } from './skills/types';
 
 function Skills() {
   const getCategoryIcon = (category: SkillCategory) => {
@@ -57,10 +58,9 @@ function Skills() {
                 </Box>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0 }}>
                   {skillsByCategory[category].map((skill, index) => (
-                    <Tooltip
+                    <CustomTooltip
                       key={index}
                       title={skill.description || skill.name}
-                      arrow
                     >
                       <Chip
                         label={skill.name}
@@ -83,7 +83,7 @@ function Skills() {
                           },
                         }}
                       />
-                    </Tooltip>
+                    </CustomTooltip>
                   ))}
                 </Box>
               </Box>

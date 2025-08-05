@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
+
 import List from '@mui/material/List';
 import { SxProps, Theme } from '@mui/material/styles';
-import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
+
+import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
 
 interface TooltipListProps {
   children: ReactNode;

@@ -46,22 +46,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-
 #root {
   margin: 0 auto;
   width: 100%;
 }
 
-
 body {
   place-items: normal;
 }
 
-
-.noWrap{
+.noWrap {
   white-space: nowrap;
 }
-.print{
+.print {
   display: none;
 }
 
@@ -70,24 +67,24 @@ body {
   margin: 10mm 15mm;
   size: A4;
   @top-center {
-    content: "Резюме — Бугай Максим";
+    content: 'Резюме — Бугай Максим';
   }
   @bottom-right {
-    content: "Страница " counter(page);
+    content: 'Страница ' counter(page);
   }
 }
 
 @media print {
-  .print{
+  .print {
     display: block;
   }
-  html{
-    background-color: white!important;
+  html {
+    background-color: white !important;
   }
 
-
   /* Установка масштаба и ориентации */
-  html, body {
+  html,
+  body {
     width: 210mm;
     height: 297mm;
     -webkit-print-color-adjust: exact !important;
@@ -99,16 +96,16 @@ body {
     /*padding-left: 0 !important;*/
     /*padding-right: 0 !important;*/
   }
-  .MuiTimelineItem-root::before{
-    content: none!important;
+  .MuiTimelineItem-root::before {
+    content: none !important;
   }
-  .MuiTimelineContent-root{
-    padding: 0!important;
+  .MuiTimelineContent-root {
+    padding: 0 !important;
   }
-  .MuiTimelineContent-root .MuiPaper-rounded{
-    border-top-width: 0!important;
-    border-left-width: 0!important;
-    border-right-width: 0!important;
+  .MuiTimelineContent-root .MuiPaper-rounded {
+    border-top-width: 0 !important;
+    border-left-width: 0 !important;
+    border-right-width: 0 !important;
     border-radius: 0;
     margin-bottom: 0;
   }
@@ -123,7 +120,8 @@ body {
     break-before: auto;
     break-after: auto;
   }
-  h2, h3 {
+  h2,
+  h3 {
     break-after: avoid;
   }
 
@@ -133,32 +131,32 @@ body {
     margin-right: 0 !important;
     /*width: 100% !important;*/
   }
-  .MuiTypography-h4{
-    font-size: 1.5rem!important;
+  .MuiTypography-h4 {
+    font-size: 1.5rem !important;
   }
-  .MuiTypography-h5{
-    font-size: 1.2rem!important;
+  .MuiTypography-h5 {
+    font-size: 1.2rem !important;
   }
-  .MuiTypography-h6{
-    font-size: 1rem!important;
+  .MuiTypography-h6 {
+    font-size: 1rem !important;
   }
-  .MuiListItemText-multiline{
+  .MuiListItemText-multiline {
     margin: 0 !important;
   }
 
   .MuiAccordionSummary-expandIconWrapper {
     display: none !important;
   }
-  .MuiFab-root{
+  .MuiFab-root {
     display: none !important;
   }
 
-  #work-history-content > div{
+  #work-history-content > div {
     padding: 0;
   }
-  .MuiTimeline-root{
-    padding: 0!important;
-    margin: 0!important;
+  .MuiTimeline-root {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   .MuiAccordion-root {
@@ -177,14 +175,14 @@ body {
   .MuiSvgIcon-root {
     fill: #000 !important;
   }
-  button.MuiTypography-root{
+  button.MuiTypography-root {
     color: black;
   }
 
-  .MuiListItemText-root{
+  .MuiListItemText-root {
     line-height: 1.2 !important;
     margin: 0 !important;
-    .MuiTypography-root{
+    .MuiTypography-root {
       line-height: 1 !important;
     }
   }
@@ -231,7 +229,6 @@ body {
     height: 24px;
     margin: 2px;
   }
-
 }
 .mobile {
   .MuiTimelineItem-root::before {
@@ -256,18 +253,18 @@ body {
   .MuiTimelineContent-root {
     padding: 8px 0 !important;
   }
-  .MuiTimeline-root{
+  .MuiTimeline-root {
     padding: 0 !important;
     margin: 0 !important;
   }
-  .MuiCardContent-root{
+  .MuiCardContent-root {
     padding: 0 !important;
     margin: 0 !important;
   }
-  .MuiPaper-root{
+  .MuiPaper-root {
     border-width: 0 !important;
   }
-  .MuiChip-label{
+  .MuiChip-label {
     font-size: 0.75rem;
   }
   .MuiChip-root {

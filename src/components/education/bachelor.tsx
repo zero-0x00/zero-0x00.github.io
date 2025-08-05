@@ -1,15 +1,16 @@
-import Typography from '@mui/material/Typography';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import SchoolIcon from '@mui/icons-material/School';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import SchoolIcon from '@mui/icons-material/School';
-import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
-import { useIsMobile } from '../../hooks/useIsMobile.tsx';
+import Typography from '@mui/material/Typography';
+
+import { useIsMobile } from '@hooks/useIsMobile';
+import { useIsPrintMode } from '@hooks/useIsPrintMode';
 
 const Bachelor = () => {
   const isPrintMode = useIsPrintMode();

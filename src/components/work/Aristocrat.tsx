@@ -1,10 +1,10 @@
-import Tooltip from '@mui/material/Tooltip';
-import TooltipList from '../common/TooltipList';
-import TooltipListItem from '../common/TooltipListItem';
-import WorkTimelineItem from '../common/WorkTimelineItem';
-import AristocratLogoLight from '../../assets/aristocrat_light.svg';
-import AristocratLogoDark from '../../assets/aristocrat_dark.svg';
-import { useIsDarkMode } from '../theme/useIsDarkMode.tsx';
+import AristocratLogoDark from '@assets/aristocrat_dark.svg';
+import AristocratLogoLight from '@assets/aristocrat_light.svg';
+import CustomTooltip from '@ui/CustomTooltip';
+import TooltipList from '@ui/TooltipList';
+import TooltipListItem from '@ui/TooltipListItem';
+import WorkTimelineItem from '@ui/WorkTimelineItem';
+import { useIsDarkMode } from '@ui/theme/useIsDarkMode';
 
 const Aristocrat = () => {
   const isDarkMode = useIsDarkMode();
@@ -22,39 +22,24 @@ const Aristocrat = () => {
           text={
             <>
               Улучшил производительность микросервиса
-              <Tooltip
-                title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8"
-                arrow
-              >
+              <CustomTooltip title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8">
                 <span className="term">NodeJS</span>
-              </Tooltip>
-              <Tooltip
-                title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы"
-                arrow
-              >
+              </CustomTooltip>
+              <CustomTooltip title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы">
                 <span className="term">API-Gateway</span>
-              </Tooltip>{' '}
+              </CustomTooltip>{' '}
               на
-              <Tooltip
-                title="Строго типизированный язык программирования, расширяющий JavaScript добавлением статической типизации, интерфейсов и других возможностей"
-                arrow
-              >
+              <CustomTooltip title="Строго типизированный язык программирования, расширяющий JavaScript добавлением статической типизации, интерфейсов и других возможностей">
                 <span className="term">TypeScript</span>
-              </Tooltip>
+              </CustomTooltip>
               и масштабировал в
-              <Tooltip
-                title="Система оркестрации контейнеров для автоматического развертывания, масштабирования и управления контейнеризированными приложениями"
-                arrow
-              >
+              <CustomTooltip title="Система оркестрации контейнеров для автоматического развертывания, масштабирования и управления контейнеризированными приложениями">
                 <span className="term">Kubernetes</span>
-              </Tooltip>
+              </CustomTooltip>
               на N
-              <Tooltip
-                title="Наименьшая и простейшая единица в Kubernetes, представляющая собой группу из одного или нескольких контейнеров, которые совместно используют хранилище и сеть"
-                arrow
-              >
+              <CustomTooltip title="Наименьшая и простейшая единица в Kubernetes, представляющая собой группу из одного или нескольких контейнеров, которые совместно используют хранилище и сеть">
                 <span className="term">pod</span>
-              </Tooltip>
+              </CustomTooltip>
             </>
           }
         />
@@ -63,12 +48,9 @@ const Aristocrat = () => {
           text={
             <>
               Разработал на TypeScript микросервис сокетов
-              <Tooltip
-                title="Библиотека для двунаправленной связи в реальном времени между клиентами и сервером"
-                arrow
-              >
+              <CustomTooltip title="Библиотека для двунаправленной связи в реальном времени между клиентами и сервером">
                 <span className="term">Socket.IO</span>
-              </Tooltip>
+              </CustomTooltip>
               . Это обеспечило проекту асинхронность в UI.
             </>
           }
@@ -78,19 +60,13 @@ const Aristocrat = () => {
           text={
             <>
               Участвовал в настройке
-              <Tooltip
-                title="Стек Elasticsearch, Logstash и Kibana для поиска, анализа и визуализации логов"
-                arrow
-              >
+              <CustomTooltip title="Стек Elasticsearch, Logstash и Kibana для поиска, анализа и визуализации логов">
                 <span className="term">ELK</span>
-              </Tooltip>
+              </CustomTooltip>
               стека и
-              <Tooltip
-                title="Инструмент непрерывной интеграции и доставки (CI/CD), автоматизирующий процессы сборки и развертывания"
-                arrow
-              >
+              <CustomTooltip title="Инструмент непрерывной интеграции и доставки (CI/CD), автоматизирующий процессы сборки и развертывания">
                 <span className="term">Jenkins</span>
-              </Tooltip>
+              </CustomTooltip>
               Jobs
             </>
           }
@@ -100,32 +76,20 @@ const Aristocrat = () => {
           text={
             <>
               Провел исследование на предмет утечек памяти, и аномалий в работе
-              <Tooltip
-                title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы"
-                arrow
-              >
+              <CustomTooltip title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы">
                 <span className="term">API</span>
-              </Tooltip>
+              </CustomTooltip>
               , настроив
-              <Tooltip
-                title="Инструмент мониторинга производительности и сбора метрик"
-                arrow
-              >
+              <CustomTooltip title="Инструмент мониторинга производительности и сбора метрик">
                 <span className="term">Prometheus</span>
-              </Tooltip>
+              </CustomTooltip>
               для
-              <Tooltip
-                title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8"
-                arrow
-              >
+              <CustomTooltip title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8">
                 <span className="term">NodeJS</span>
-              </Tooltip>
-              <Tooltip
-                title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы"
-                arrow
-              >
+              </CustomTooltip>
+              <CustomTooltip title="Шлюз API, который маршрутизирует запросы к соответствующим микросервисам и объединяет ответы">
                 <span className="term">ApiGateway</span>
-              </Tooltip>
+              </CustomTooltip>
               .
             </>
           }
@@ -135,19 +99,13 @@ const Aristocrat = () => {
           text={
             <>
               Улучшил скорость исправления UI ошибок, выполнив интеграцию
-              <Tooltip
-                title="JavaScript-библиотека для создания пользовательских интерфейсов на основе компонентного подхода"
-                arrow
-              >
+              <CustomTooltip title="JavaScript-библиотека для создания пользовательских интерфейсов на основе компонентного подхода">
                 <span className="term">React</span>
-              </Tooltip>
+              </CustomTooltip>
               и NodeJS ApiGateway с
-              <Tooltip
-                title="Платформа мониторинга ошибок и производительности приложений в реальном времени"
-                arrow
-              >
+              <CustomTooltip title="Платформа мониторинга ошибок и производительности приложений в реальном времени">
                 <span className="term">Sentry</span>
-              </Tooltip>
+              </CustomTooltip>
               .
             </>
           }
@@ -157,19 +115,13 @@ const Aristocrat = () => {
           text={
             <>
               Внедрил новую единую платформу автоматизированного тестирования
-              <Tooltip
-                title="Фреймворк для автоматизации end-to-end тестирования веб-приложений"
-                arrow
-              >
+              <CustomTooltip title="Фреймворк для автоматизации end-to-end тестирования веб-приложений">
                 <span className="term">Playwright</span>
-              </Tooltip>
+              </CustomTooltip>
               (
-              <Tooltip
-                title="Строго типизированный язык программирования, расширяющий возможности JavaScript"
-                arrow
-              >
+              <CustomTooltip title="Строго типизированный язык программирования, расширяющий возможности JavaScript">
                 <span className="term">TypeScript</span>
-              </Tooltip>
+              </CustomTooltip>
               ) в компанию.
             </>
           }
@@ -179,12 +131,9 @@ const Aristocrat = () => {
           text={
             <>
               Улучшил
-              <Tooltip
-                title="Метрика Web Vitals, измеряющая время загрузки самого большого видимого элемента на странице"
-                arrow
-              >
+              <CustomTooltip title="Метрика Web Vitals, измеряющая время загрузки самого большого видимого элемента на странице">
                 <span className="term">Largest Contentful Paint (LCP)</span>
-              </Tooltip>
+              </CustomTooltip>
               метрику сайта путем дробления chunks во время сборки.
             </>
           }

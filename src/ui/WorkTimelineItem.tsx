@@ -1,17 +1,19 @@
 import { ReactNode } from 'react';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Chip from '@mui/material/Chip';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
+
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
-import { useIsMobile } from '../../hooks/useIsMobile.tsx';
+import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+import { useIsMobile } from '@hooks/useIsMobile.tsx';
+import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
 
 interface WorkTimelineItemProps {
   period: string;

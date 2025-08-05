@@ -1,9 +1,9 @@
-import Tooltip from '@mui/material/Tooltip';
-
-import TooltipList from '../common/TooltipList';
-import TooltipListItem from '../common/TooltipListItem';
-import WorkTimelineItem from '../common/WorkTimelineItem';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+
+import CustomTooltip from '@ui/CustomTooltip';
+import TooltipList from '@ui/TooltipList';
+import TooltipListItem from '@ui/TooltipListItem';
+import WorkTimelineItem from '@ui/WorkTimelineItem';
 
 const Other = () => {
   return (
@@ -19,19 +19,13 @@ const Other = () => {
           text={
             <>
               Разработал, внедрил и поддерживал
-              <Tooltip
-                title="Content Management System - Система управления контентом, позволяющая создавать и редактировать цифровой контент"
-                arrow
-              >
+              <CustomTooltip title="Content Management System - Система управления контентом, позволяющая создавать и редактировать цифровой контент">
                 <span className="term">CMS</span>
-              </Tooltip>{' '}
+              </CustomTooltip>{' '}
               на
-              <Tooltip
-                title="Язык программирования, используемый для создания веб-приложений"
-                arrow
-              >
+              <CustomTooltip title="Язык программирования, используемый для создания веб-приложений">
                 <span className="term">PHP</span>
-              </Tooltip>
+              </CustomTooltip>
               для управления контентом на сайте магазина горных велосипедов.
             </>
           }
@@ -41,12 +35,9 @@ const Other = () => {
           text={
             <>
               Участвовал в разработке интерактивной карты для
-              <Tooltip
-                title="Система управления взаимоотношениями с клиентами"
-                arrow
-              >
+              <CustomTooltip title="Система управления взаимоотношениями с клиентами">
                 <span className="term">CRM</span>
-              </Tooltip>
+              </CustomTooltip>
               системы нефтедобывающей компании.
             </>
           }
@@ -58,27 +49,21 @@ const Other = () => {
           text={
             <>
               Занимался разработкой
-              <Tooltip title="Пользовательский интерфейс" arrow>
+              <CustomTooltip title="Пользовательский интерфейс">
                 <span className="term">UI</span>
-              </Tooltip>
+              </CustomTooltip>
               для нескольких лендингов используя
-              <Tooltip title="Язык разметки веб-страниц" arrow>
+              <CustomTooltip title="Язык разметки веб-страниц">
                 <span className="term">HTML</span>
-              </Tooltip>
+              </CustomTooltip>
               ,
-              <Tooltip
-                title="Язык таблиц стилей для описания внешнего вида документа"
-                arrow
-              >
+              <CustomTooltip title="Язык таблиц стилей для описания внешнего вида документа">
                 <span className="term">CSS</span>
-              </Tooltip>
+              </CustomTooltip>
               и
-              <Tooltip
-                title="Язык программирования, используемый для создания интерактивных элементов на веб-страницах"
-                arrow
-              >
+              <CustomTooltip title="Язык программирования, используемый для создания интерактивных элементов на веб-страницах">
                 <span className="term">JavaScript</span>
-              </Tooltip>
+              </CustomTooltip>
               .
             </>
           }

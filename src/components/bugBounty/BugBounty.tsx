@@ -1,16 +1,18 @@
+import { useState } from 'react';
+
+import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-import Typography from '@mui/material/Typography';
-import Tooltip from '@mui/material/Tooltip';
-import Link from '@mui/material/Link';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import { useState } from 'react';
-import SectionAccordion from '../common/SectionAccordion.tsx';
+import Link from '@mui/material/Link';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+
+import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
+import SectionAccordion from '@ui/SectionAccordion.tsx';
 
 import { bugbountyPrograms } from './bugbountyData.ts';
-import { useIsPrintMode } from '../../hooks/useIsPrintMode.tsx';
 
 function BugBounty() {
   const isPrintMode = useIsPrintMode();
