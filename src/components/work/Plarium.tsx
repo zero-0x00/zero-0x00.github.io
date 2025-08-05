@@ -1,6 +1,6 @@
 import PlariumLogoDark from '@assets/plarium_dark.svg';
 import PlariumLogoLight from '@assets/plarium_light.svg';
-import CustomTooltip from '@ui/CustomTooltip';
+import Tooltip from '@ui/Tooltip';
 import TooltipList from '@ui/TooltipList';
 import TooltipListItem from '@ui/TooltipListItem';
 import WorkTimelineItem from '@ui/WorkTimelineItem';
@@ -12,6 +12,7 @@ const Plarium = () => {
     <WorkTimelineItem
       period="Февраль 2016 — Октябрь 2017"
       company="Plarium"
+      companyTooltip="Plarium — международная компания-разработчик мобильных и браузерных игр, основанная в 2009 году в Харькове (Украина). Создает стратегии, RPG и MMO игры. С 2017 года является частью австралийской корпорации Aristocrat Leisure Limited. C 2025 года вошла в состав группы компаний MTG"
       position="Middle Frontend Developer"
       logo={isDarkMode ? <PlariumLogoDark /> : <PlariumLogoLight />}
     >
@@ -20,9 +21,9 @@ const Plarium = () => {
           text={
             <>
               Спикер конференции{' '}
-              <CustomTooltip title="Крупнейшая JavaScript-конференция в Украине, объединяющая фронтенд-разработчиков">
+              <Tooltip title="Крупнейшая JavaScript-конференция в Украине, объединяющая фронтенд-разработчиков">
                 <span className="term">KharkivJS</span>
-              </CustomTooltip>{' '}
+              </Tooltip>{' '}
               по вопросам UX и UI в веб-приложениях.
             </>
           }
@@ -33,9 +34,9 @@ const Plarium = () => {
             <>
               Оптимизировал трансформации данных в NodeJS API Gateway, создав
               open-source библиотеку
-              <CustomTooltip title="Библиотека для преобразования и фильтрации данных API на лету">
+              <Tooltip title="Библиотека для преобразования и фильтрации данных API на лету">
                 <span className="term">apop</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />
@@ -47,13 +48,13 @@ const Plarium = () => {
             <>
               Участвовал в разработке проекта для аналитики маркетинговых
               кампаний, используя
-              <CustomTooltip title="Инструмент для быстрого создания React-приложений без необходимости настройки окружения">
+              <Tooltip title="Инструмент для быстрого создания React-приложений без необходимости настройки окружения">
                 <span className="term">Create React App</span>
-              </CustomTooltip>
+              </Tooltip>
               и
-              <CustomTooltip title="Сборщик модулей JavaScript, который создает бандлы для веб-приложений">
+              <Tooltip title="Сборщик модулей JavaScript, который создает бандлы для веб-приложений">
                 <span className="term">Webpack</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />
@@ -62,16 +63,16 @@ const Plarium = () => {
           text={
             <>
               Внедрил в команду принципы
-              <CustomTooltip title="You Aren't Gonna Need It - Не создавайте функциональность заранее, пока она не нужна">
+              <Tooltip title="You Aren't Gonna Need It - Не создавайте функциональность заранее, пока она не нужна">
                 <span className="term">YAGNI</span>
-              </CustomTooltip>
-              <CustomTooltip title="Don't Repeat Yourself - Избегайте дублирования кода, выделяйте повторяющиеся части в отдельные компоненты">
+              </Tooltip>
+              <Tooltip title="Don't Repeat Yourself - Избегайте дублирования кода, выделяйте повторяющиеся части в отдельные компоненты">
                 <span className="term">DRY</span>
-              </CustomTooltip>
+              </Tooltip>
               и
-              <CustomTooltip title="Keep It Simple, Stupid - Сохраняйте простоту и избегайте лишней сложности">
+              <Tooltip title="Keep It Simple, Stupid - Сохраняйте простоту и избегайте лишней сложности">
                 <span className="term">KISS</span>
-              </CustomTooltip>
+              </Tooltip>
               . Очистил сложно-читаемый Legacy код из бизнес логики.
             </>
           }
@@ -81,13 +82,13 @@ const Plarium = () => {
           text={
             <>
               Разработал
-              <CustomTooltip title="Progressive Web App - веб-приложение, которое работает как нативное мобильное приложение с возможностью офлайн-работы">
+              <Tooltip title="Progressive Web App - веб-приложение, которое работает как нативное мобильное приложение с возможностью офлайн-работы">
                 <span className="term">PWA</span>
-              </CustomTooltip>
+              </Tooltip>
               приложение для управления финансовыми документами на базе
-              <CustomTooltip title="JavaScript-библиотека для создания пользовательских интерфейсов">
+              <Tooltip title="JavaScript-библиотека для создания пользовательских интерфейсов">
                 <span className="term">React</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />

@@ -11,8 +11,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { useIsPrintMode } from '@hooks/useIsPrintMode';
-import CustomTooltip from '@ui/CustomTooltip';
 import SectionAccordion from '@ui/SectionAccordion';
+import Tooltip from '@ui/Tooltip';
 
 import {
   categoryNames,
@@ -58,7 +58,7 @@ function Skills() {
                 </Box>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0 }}>
                   {skillsByCategory[category].map((skill, index) => (
-                    <CustomTooltip
+                    <Tooltip
                       key={index}
                       title={skill.description || skill.name}
                     >
@@ -83,7 +83,7 @@ function Skills() {
                           },
                         }}
                       />
-                    </CustomTooltip>
+                    </Tooltip>
                   ))}
                 </Box>
               </Box>

@@ -1,6 +1,6 @@
 import MTGLogoDark from '@assets/mtg_dark.svg';
 import MTGLogoLight from '@assets/mtg_light.svg';
-import CustomTooltip from '@ui/CustomTooltip';
+import Tooltip from '@ui/Tooltip';
 import TooltipList from '@ui/TooltipList';
 import TooltipListItem from '@ui/TooltipListItem';
 import WorkTimelineItem from '@ui/WorkTimelineItem';
@@ -12,6 +12,7 @@ const MTG = () => {
     <WorkTimelineItem
       period="Февраль 2025 — настоящее время"
       company="Modern Times Group"
+      companyTooltip="Modern Times Group (MTG) — шведская международная медиа-компания, основанная в 1987 году, со штаб-квартирой в Стокгольме. Специализируется на цифровых развлечениях, киберспорте и разработке мобильных игр через свои подразделения ESL Gaming и InnoGames. С 2025 года компанией владеет Plarium."
       position="Senior Frontend Developer"
       logo={isDarkMode ? <MTGLogoDark /> : <MTGLogoLight />}
     >
@@ -21,16 +22,16 @@ const MTG = () => {
             <>
               Разрабатываю коммерческий продукт для маркетологов в сфере GameDev
               с использованием
-              <CustomTooltip title="Строго типизированный надмножество JavaScript, добавляющий статическую типизацию">
+              <Tooltip title="Строго типизированный надмножество JavaScript, добавляющий статическую типизацию">
                 <span className="term">TypeScript</span>
-              </CustomTooltip>
-              <CustomTooltip title="JavaScript-библиотека для создания пользовательских интерфейсов на основе компонентного подхода">
+              </Tooltip>
+              <Tooltip title="JavaScript-библиотека для создания пользовательских интерфейсов на основе компонентного подхода">
                 <span className="term">React</span>
-              </CustomTooltip>
+              </Tooltip>
               и
-              <CustomTooltip title="Библиотека для двунаправленной связи в реальном времени между клиентами и сервером">
+              <Tooltip title="Библиотека для двунаправленной связи в реальном времени между клиентами и сервером">
                 <span className="term">Socket.IO</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />
@@ -39,9 +40,9 @@ const MTG = () => {
           text={
             <>
               Разрабатываю UI интерфейс для чатбота с
-              <CustomTooltip title="Мультимодальная языковая модель от Google, способная генерировать текст, анализировать изображения и выполнять сложные задачи ИИ">
+              <Tooltip title="Мультимодальная языковая модель от Google, способная генерировать текст, анализировать изображения и выполнять сложные задачи ИИ">
                 <span className="term">Gemini AI</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />
@@ -49,13 +50,13 @@ const MTG = () => {
           text={
             <>
               Провожу
-              <CustomTooltip title="Систематический процесс проверки кода другими разработчиками для выявления ошибок, улучшения качества и обмена знаниями">
+              <Tooltip title="Систематический процесс проверки кода другими разработчиками для выявления ошибок, улучшения качества и обмена знаниями">
                 <span className="term">Code Review</span>
-              </CustomTooltip>
+              </Tooltip>
               , выполняю сборку и поддержку UI релизов через
-              <CustomTooltip title="Инструмент непрерывной интеграции и доставки (CI/CD), автоматизирующий процессы сборки и развертывания">
+              <Tooltip title="Инструмент непрерывной интеграции и доставки (CI/CD), автоматизирующий процессы сборки и развертывания">
                 <span className="term">Jenkins</span>
-              </CustomTooltip>
+              </Tooltip>
               и внутренних инфраструктурных проектов
             </>
           }
@@ -65,17 +66,17 @@ const MTG = () => {
           text={
             <>
               Занимаюсь рефакторингом монорепозитория UI пакетов и миграцией на
-              <CustomTooltip title="Строго типизированный язык программирования, расширяющий JavaScript добавлением статической типизации, интерфейсов и других возможностей">
+              <Tooltip title="Строго типизированный язык программирования, расширяющий JavaScript добавлением статической типизации, интерфейсов и других возможностей">
                 <span className="term">TypeScript</span>
-              </CustomTooltip>
+              </Tooltip>
               и
-              <CustomTooltip title="Современный инструмент сборки, предлагающий быструю разработку с горячей перезагрузкой и оптимизированную сборку для продакшена">
+              <Tooltip title="Современный инструмент сборки, предлагающий быструю разработку с горячей перезагрузкой и оптимизированную сборку для продакшена">
                 <span className="term">Vite</span>
-              </CustomTooltip>
+              </Tooltip>
               (
-              <CustomTooltip title="Speedy Web Compiler - быстрая альтернатива Babel для транспиляции JavaScript/TypeScript, написанная на Rust">
+              <Tooltip title="Speedy Web Compiler - быстрая альтернатива Babel для транспиляции JavaScript/TypeScript, написанная на Rust">
                 <span className="term">SWC</span>
-              </CustomTooltip>
+              </Tooltip>
               )
             </>
           }
@@ -85,17 +86,17 @@ const MTG = () => {
           text={
             <>
               Разрабатываю асинхронную связь UI с микросервисами
-              <CustomTooltip title="Фреймворк для построения веб-приложений и сервисов на платформе .NET с открытым исходным кодом">
+              <Tooltip title="Фреймворк для построения веб-приложений и сервисов на платформе .NET с открытым исходным кодом">
                 <span className="term">ASP.NET</span>
-              </CustomTooltip>
+              </Tooltip>
               с помощью
-              <CustomTooltip title="Брокер сообщений для асинхронной передачи данных между сервисами">
+              <Tooltip title="Брокер сообщений для асинхронной передачи данных между сервисами">
                 <span className="term">RabbitMQ</span>
-              </CustomTooltip>
+              </Tooltip>
               с
-              <CustomTooltip title="Библиотека для двунаправленной связи в реальном времени между клиентами и сервером">
+              <Tooltip title="Библиотека для двунаправленной связи в реальном времени между клиентами и сервером">
                 <span className="term">Socket.IO</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />
@@ -110,17 +111,17 @@ const MTG = () => {
           text={
             <>
               Обеспечил общие
-              <CustomTooltip title="Инструмент статического анализа кода для выявления проблемных паттернов в JavaScript/TypeScript">
+              <Tooltip title="Инструмент статического анализа кода для выявления проблемных паттернов в JavaScript/TypeScript">
                 <span className="term">ESlint</span>
-              </CustomTooltip>
+              </Tooltip>
               /
-              <CustomTooltip title="Инструмент для автоматического форматирования кода по заданным правилам стиля">
+              <Tooltip title="Инструмент для автоматического форматирования кода по заданным правилам стиля">
                 <span className="term">Prettier</span>
-              </CustomTooltip>
+              </Tooltip>
               правила, общие инструменты компонентного тестирования с
-              <CustomTooltip title="Фреймворк для автоматизации end-to-end тестирования веб-приложений">
+              <Tooltip title="Фреймворк для автоматизации end-to-end тестирования веб-приложений">
                 <span className="term">Playwright</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />
@@ -129,13 +130,13 @@ const MTG = () => {
           text={
             <>
               Улучшил производительность
-              <CustomTooltip title="Компонент таблицы с расширенной функциональностью для Material UI, поддерживающий большие наборы данных, фильтрацию и сортировку">
+              <Tooltip title="Компонент таблицы с расширенной функциональностью для Material UI, поддерживающий большие наборы данных, фильтрацию и сортировку">
                 <span className="term">MUI X-Data-Grid</span>
-              </CustomTooltip>
+              </Tooltip>
               с помощью инструментов профилирования, улучшив метрику
-              <CustomTooltip title="Метрика Web Vitals, измеряющая время загрузки самого большого видимого элемента на странице">
+              <Tooltip title="Метрика Web Vitals, измеряющая время загрузки самого большого видимого элемента на странице">
                 <span className="term">LCP</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />
@@ -144,17 +145,17 @@ const MTG = () => {
           text={
             <>
               Настроил централизованное управление секретами с
-              <CustomTooltip title="Инструмент для безопасного хранения и доступа к секретам, токенам и другим конфиденциальным данным">
+              <Tooltip title="Инструмент для безопасного хранения и доступа к секретам, токенам и другим конфиденциальным данным">
                 <span className="term">Vault</span>
-              </CustomTooltip>
+              </Tooltip>
               и регистрацию
-              <CustomTooltip title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8">
+              <Tooltip title="Серверная платформа для выполнения JavaScript вне браузера, основанная на движке V8">
                 <span className="term">NodeJS</span>
-              </CustomTooltip>
+              </Tooltip>
               микросервисов сервисов через
-              <CustomTooltip title="Механизм для обнаружения и регистрации доступных сервисов в распределенной системе">
+              <Tooltip title="Механизм для обнаружения и регистрации доступных сервисов в распределенной системе">
                 <span className="term">Service Discovery</span>
-              </CustomTooltip>
+              </Tooltip>
             </>
           }
         />

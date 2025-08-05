@@ -1,12 +1,12 @@
 import Timeline from '@mui/lab/Timeline';
 
-import { useIsMobile } from '@hooks/useIsMobile.tsx';
-import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
+import { useIsMobile } from '@hooks/useIsMobile';
+import { useIsPrintMode } from '@hooks/useIsPrintMode';
 import SectionAccordion from '@ui/SectionAccordion';
 
-import Bachelor from './education/bachelor.tsx';
-import JuniorSpecialist from './education/juniorSpecialist.tsx';
-import Master from './education/master.tsx';
+import Bachelor from './education/bachelor';
+import JuniorSpecialist from './education/juniorSpecialist';
+import Master from './education/master';
 
 const EducationHistory = () => {
   const isPrintMode = useIsPrintMode();

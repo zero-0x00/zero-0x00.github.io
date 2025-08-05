@@ -1,6 +1,6 @@
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 
-import CustomTooltip from '@ui/CustomTooltip';
+import Tooltip from '@ui/Tooltip';
 import TooltipList from '@ui/TooltipList';
 import TooltipListItem from '@ui/TooltipListItem';
 import WorkTimelineItem from '@ui/WorkTimelineItem';
@@ -19,13 +19,13 @@ const Other = () => {
           text={
             <>
               Разработал, внедрил и поддерживал
-              <CustomTooltip title="Content Management System - Система управления контентом, позволяющая создавать и редактировать цифровой контент">
+              <Tooltip title="Content Management System - Система управления контентом, позволяющая создавать и редактировать цифровой контент">
                 <span className="term">CMS</span>
-              </CustomTooltip>{' '}
+              </Tooltip>{' '}
               на
-              <CustomTooltip title="Язык программирования, используемый для создания веб-приложений">
+              <Tooltip title="Язык программирования, используемый для создания веб-приложений">
                 <span className="term">PHP</span>
-              </CustomTooltip>
+              </Tooltip>
               для управления контентом на сайте магазина горных велосипедов.
             </>
           }
@@ -35,9 +35,9 @@ const Other = () => {
           text={
             <>
               Участвовал в разработке интерактивной карты для
-              <CustomTooltip title="Система управления взаимоотношениями с клиентами">
+              <Tooltip title="Система управления взаимоотношениями с клиентами">
                 <span className="term">CRM</span>
-              </CustomTooltip>
+              </Tooltip>
               системы нефтедобывающей компании.
             </>
           }
@@ -49,21 +49,21 @@ const Other = () => {
           text={
             <>
               Занимался разработкой
-              <CustomTooltip title="Пользовательский интерфейс">
+              <Tooltip title="Пользовательский интерфейс">
                 <span className="term">UI</span>
-              </CustomTooltip>
+              </Tooltip>
               для нескольких лендингов используя
-              <CustomTooltip title="Язык разметки веб-страниц">
+              <Tooltip title="Язык разметки веб-страниц">
                 <span className="term">HTML</span>
-              </CustomTooltip>
+              </Tooltip>
               ,
-              <CustomTooltip title="Язык таблиц стилей для описания внешнего вида документа">
+              <Tooltip title="Язык таблиц стилей для описания внешнего вида документа">
                 <span className="term">CSS</span>
-              </CustomTooltip>
+              </Tooltip>
               и
-              <CustomTooltip title="Язык программирования, используемый для создания интерактивных элементов на веб-страницах">
+              <Tooltip title="Язык программирования, используемый для создания интерактивных элементов на веб-страницах">
                 <span className="term">JavaScript</span>
-              </CustomTooltip>
+              </Tooltip>
               .
             </>
           }

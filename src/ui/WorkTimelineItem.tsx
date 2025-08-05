@@ -14,10 +14,12 @@ import Typography from '@mui/material/Typography';
 
 import { useIsMobile } from '@hooks/useIsMobile.tsx';
 import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
+import Tooltip from '@ui/Tooltip';
 
 interface WorkTimelineItemProps {
   period: string;
   company: string;
+  companyTooltip?: string;
   position: string;
   logo: ReactNode;
   children: ReactNode;
@@ -27,6 +29,7 @@ interface WorkTimelineItemProps {
 const WorkTimelineItem = ({
   period,
   company,
+  companyTooltip,
   position,
   logo,
   children,
@@ -34,6 +37,17 @@ const WorkTimelineItem = ({
 }: WorkTimelineItemProps) => {
   const isPrintMode = useIsPrintMode();
   const isMobile = useIsMobile();
+
+  const renderCompanyName = () => {
+    if (companyTooltip) {
+      return (
+        <Tooltip title={companyTooltip}>
+          <span>{company}</span>
+        </Tooltip>
+      );
+    }
+    return company;
+  };
 
   return isMobile || isPrintMode ? (
     <TimelineItem className={'section'}>
@@ -58,7 +72,7 @@ const WorkTimelineItem = ({
                   align={'left'}
                   sx={{ fontWeight: 'bold' }}
                 >
-                  {company}
+                  {renderCompanyName()}
                 </Typography>
                 <Typography variant={'subtitle2'} align={'left'}>
                   {period}
@@ -104,7 +118,7 @@ const WorkTimelineItem = ({
                 component="div"
                 sx={{ fontWeight: 'bold' }}
               >
-                {company}
+                {renderCompanyName()}
               </Typography>
               <Chip label={position} color="primary" variant="outlined" />
             </Box>

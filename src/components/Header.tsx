@@ -10,8 +10,8 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
 import avatarImage from '@assets/avatar.jpg';
-import { useIsMobile } from '@hooks/useIsMobile.tsx';
-import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
+import { useIsMobile } from '@hooks/useIsMobile';
+import { useIsPrintMode } from '@hooks/useIsPrintMode';
 
 const HeaderGrid = styled(Grid)(() => ({
   '@media print': {

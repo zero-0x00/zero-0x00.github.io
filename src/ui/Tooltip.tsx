@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Tooltip, TooltipProps } from '@mui/material';
+import { Tooltip as OriginalTooltip, TooltipProps } from '@mui/material';
 
 type CustomTooltipProps = TooltipProps & {
   children: React.ReactElement;
@@ -9,7 +9,7 @@ type CustomTooltipProps = TooltipProps & {
 /**
  * Кастомный компонент Tooltip с улучшенными настройками для мобильных устройств
  */
-const CustomTooltip: React.FC<CustomTooltipProps> = ({
+const Tooltip: React.FC<CustomTooltipProps> = ({
   children,
   title,
   arrow = true,
@@ -17,7 +17,7 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({
   ...rest
 }) => {
   return (
-    <Tooltip
+    <OriginalTooltip
       title={title}
       arrow={arrow}
       placement={placement}
@@ -27,8 +27,8 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({
       {...rest}
     >
       {children}
-    </Tooltip>
+    </OriginalTooltip>
   );
 };
 
-export default CustomTooltip;
+export default Tooltip;

@@ -6,11 +6,11 @@ import Chip from '@mui/material/Chip';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
-import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
-import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
-import SectionAccordion from '@ui/SectionAccordion.tsx';
+import { useIsPrintMode } from '@hooks/useIsPrintMode';
+import SectionAccordion from '@ui/SectionAccordion';
+import Tooltip from '@ui/Tooltip';
 
 import { bugbountyPrograms } from './bugbountyData.ts';
 
