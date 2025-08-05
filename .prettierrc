@@ -10,7 +10,8 @@
     "react",
     "@mui",
     "<THIRD_PARTY_MODULES>",
-    "^[@ui|@assets|@hooks|@components]",
+    "^[@ui|@hooks|@components]",
+    "@assets",
     "^[./]"
   ],
   "importOrderSeparation": true
