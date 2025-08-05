@@ -8,6 +8,8 @@ import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
+// Импортируем PDF как URL
+import coderunPdfUrl from '@assets/coderun.pdf';
 import { useIsPrintMode } from '@hooks/useIsPrintMode';
 import SectionAccordion from '@ui/SectionAccordion';
 import Tooltip from '@ui/Tooltip';
@@ -52,11 +54,13 @@ function BugBounty() {
             </Link>
           </Tooltip>
         </Box>
+        <Box sx={{ mt: 1 }}>
+          В 2023 году в 1 квартале занял 2 место в рейтинге лучших
+          исследователей на платформе Bug Bounty BI.ZONE
+        </Box>
         <Box sx={{ mt: 2 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
             <Typography variant="body1" sx={{ mr: 2 }}>
-              В свободное время участвую в программах по поиску уязвимостей в
-              системах безопасности компаний:
               {isPrintMode ? null : (
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                   <Typography variant="body1" sx={{ mr: 2 }}>
@@ -71,6 +75,8 @@ function BugBounty() {
                   </Typography>
                 </Box>
               )}
+              В свободное время участвую в программах по поиску уязвимостей в
+              системах безопасности компаний:
             </Typography>
           </Box>
 
@@ -138,9 +144,7 @@ function BugBounty() {
             }}
           >
             <iframe
-              src={
-                'https://contest-hidden.s3-private.mds.yandex.net/certificate/10010466-e85e-1bde-1911-9ed19c988182?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250804T181354Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Credential=V0T1EzqIkxfG5tKj9dfL%2F20250804%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=1fe902f6765618d6e92f023974e2cb96f1ff0c1062abccc6cc0a24a13d8fef5e#view=FitH&toolbar=0&navpanes=0'
-              }
+              src={`${coderunPdfUrl}#view=FitH&toolbar=0&navpanes=0`}
               style={{
                 width: '100%',
                 height: '100%',

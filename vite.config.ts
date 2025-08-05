@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 
+import { copyFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -15,6 +16,14 @@ export default defineConfig({
     svgr({
       include: '**/*.svg',
     }),
+    {
+      name: 'copy-pdf-plugin',
+      writeBundle() {
+        const srcPath = resolve(__dirname, 'src/assets/coderun.pdf');
+        const destPath = resolve(__dirname, 'dist/assets/coderun.pdf');
+        copyFileSync(srcPath, destPath);
+      },
+    },
   ],
   resolve: {
     alias: {
@@ -27,5 +36,20 @@ export default defineConfig({
   build: {
     outDir: './dist',
     emptyOutDir: true,
+    assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
+      output: {
+        assetFileNames: (assetInfo: any) => {
+          if (/\.(pdf)$/i.test(assetInfo.name)) {
+            return `assets/[name][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+      },
+    },
   },
+  publicDir: 'public',
 });
