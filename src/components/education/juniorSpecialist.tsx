@@ -30,7 +30,7 @@ const JuniorSpecialist = () => {
               </Typography>
             </Tooltip>
             <Typography variant={'subtitle2'} align={'left'}>
-              2015 - 2017
+              2009 - 2012
             </Typography>
             <Typography variant="body1" color="text.primary">
               Разработка программного обеспечения
