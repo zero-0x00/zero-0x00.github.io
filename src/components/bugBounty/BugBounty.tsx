@@ -36,6 +36,11 @@ function BugBounty() {
         defaultExpanded={true}
       >
         <Box sx={{ mt: 1 }}>
+          Постоянно развиваюсь в области фронтенд-разработки и веб-безопасности,
+          участвую в соревнованиях и bug bounty, вхожу в топ исследователей
+          BI.ZONE.
+        </Box>
+        <Box sx={{ mt: 1 }}>
           <Tooltip title="Нажмите, чтобы посмотреть сертификат" arrow>
             <Link
               component="button"
@@ -64,19 +69,17 @@ function BugBounty() {
               {isPrintMode ? null : (
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                   <Typography variant="body1" sx={{ mr: 2 }}>
-                    (
                     <Link
                       href="https://bugbounty.bi.zone/profile/zero-0x00/hackactivity"
                       target={'_blank'}
                     >
                       Профиль на платформе Bug Bounty BI.ZONE
                     </Link>
-                    )
                   </Typography>
                 </Box>
               )}
-              В свободное время участвую в программах по поиску уязвимостей в
-              системах безопасности компаний:
+              Участвую в программах по поиску уязвимостей в системах
+              безопасности компаний:
             </Typography>
           </Box>
 
