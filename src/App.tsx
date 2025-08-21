@@ -26,7 +26,7 @@ console.log(
 
 function App() {
   const isPrintMode = useIsPrintMode();
-  const isMobile = useIsMobile();
+  const { isMobile } = useIsMobile();
   useEffect(() => {
     if (isPrintMode) {
       window.print();
@@ -37,7 +37,6 @@ function App() {
     const currentUrl = window.location.href.split('?')[0];
     window.open(`${currentUrl}?print`, '_blank');
   };
-
   const isStandardView = !isPrintMode && !isMobile;
   return (
     <div className={isMobile ? 'mobile' : ''}>
