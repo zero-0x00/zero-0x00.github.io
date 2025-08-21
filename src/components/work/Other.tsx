@@ -8,7 +8,7 @@ import WorkTimelineItem from '@ui/WorkTimelineItem';
 const Other = () => {
   return (
     <WorkTimelineItem
-      period="Февраль 2014 — Январь 2016"
+      period="Октябрь 2009 — Январь 2016"
       company="Прочие проекты"
       position="Junior Frontend Developer"
       logo={<WorkHistoryIcon fontSize={'large'} />}
