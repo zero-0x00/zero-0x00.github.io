@@ -20,13 +20,13 @@ console.log(
 );
 
 console.log(
-  '%cЕсли будут вопросы, пиши в Телеграм 👉 @Engineer586898',
+  '%cЕсли будут вопросы, пиши в Телеграм 👉 https://t.me/Engineer586898',
   'color: #00ffbf; font-weight: bold;'
 );
 
 function App() {
   const isPrintMode = useIsPrintMode();
-  const { isMobile } = useIsMobile();
+  const isMobile = useIsMobile();
   useEffect(() => {
     if (isPrintMode) {
       window.print();

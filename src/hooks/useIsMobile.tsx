@@ -14,7 +14,5 @@ export const useIsMobile = () => {
 
   const isLowHeight = window.matchMedia(`(max-height: ${512}px)`).matches;
 
-  return {
-    isMobile: isMobileByAgent || isMobileByMediaQuery || isLowHeight,
-  };
+  return isMobileByAgent || isMobileByMediaQuery || isLowHeight;
 };

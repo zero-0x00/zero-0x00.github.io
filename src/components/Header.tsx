@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
 import avatarImage from '@assets/avatar.jpg';
+import QRSVG from '@assets/qr.svg';
 import { useIsMobile } from '@hooks/useIsMobile';
 import { useIsPrintMode } from '@hooks/useIsPrintMode';
 import Tooltip from '@ui/Tooltip';
@@ -67,6 +68,13 @@ function Header() {
             <Typography variant={'h6'}>Резюме</Typography>
             <Typography variant={'h4'}>Максим Бугай</Typography>
             <Typography variant={'h5'}>Senior Frontend Developer</Typography>
+            {isPrintMode && (
+              <Box
+                sx={{ position: 'absolute', top: 0, right: 0, zIndex: 1000 }}
+              >
+                <QRSVG />
+              </Box>
+            )}
           </Grid>
 
           <Grid
@@ -74,14 +82,14 @@ function Header() {
             alignItems={'flex-start'}
             justifyContent={isMobile ? 'flex-start' : 'flex-end'}
             container
-            sx={{ px: isPrintMode ? 2 : isMobile ? 2 : 0 }}
+            sx={{ px: isPrintMode ? 2 : isMobile ? 2 : 1 }}
           >
             <Grid>
               <Box
                 sx={{
                   display: 'flex',
                   justifyContent: 'end',
-                  gap: isMobile ? 3 : 1,
+                  gap: isMobile ? 3 : 2,
                 }}
               >
                 <Link
