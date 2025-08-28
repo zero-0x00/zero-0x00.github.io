@@ -11,7 +11,7 @@ const Aristocrat = () => {
   return (
     <WorkTimelineItem
       period="Октябрь 2017 — Февраль 2025"
-      company="GoGame in Plarium Aristocrat"
+      company="GoGame in Plarium (Aristocrat)"
       companyTooltip="Aristocrat Leisure Limited — австралийская компания, основанная в 1953 году, со штаб-квартирой в Сиднее. Является одним из крупнейших в мире производителей игрового оборудования и технологий для казино, а также разработчиком мобильных и социальных игр. С 2017 года компанией владеет Plarium, Big Fish, Product Madness."
       position="Senior Frontend Developer"
       logo={isDarkMode ? <AristocratLogoDark /> : <AristocratLogoLight />}

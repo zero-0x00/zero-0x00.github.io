@@ -69,7 +69,9 @@ function Header() {
             sx={{ px: 2 }}
             spacing={isPrintMode ? 1 : 0}
           >
-            <Typography variant={'h4'}>Senior Frontend Developer</Typography>
+            <Typography variant={'h4'}>
+              Senior/Lead Frontend Developer
+            </Typography>
             <Typography variant={'h5'}>Максим Бугай</Typography>
             <Typography variant={'caption'}>
               Офис/Гибрид/Удалённо (Москва СЗАО/ЗАО) | Гражданство РФ | 33 года

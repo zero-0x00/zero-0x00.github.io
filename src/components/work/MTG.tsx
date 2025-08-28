@@ -11,12 +11,35 @@ const MTG = () => {
   return (
     <WorkTimelineItem
       period="Февраль 2025 — настоящее время"
-      company="GoGame in Plarium MTG"
+      company="GoGame in Plarium (Modern Times Group)"
       companyTooltip="Modern Times Group (MTG) — шведская международная медиа-компания, основанная в 1987 году, со штаб-квартирой в Стокгольме. Специализируется на цифровых развлечениях, киберспорте и разработке мобильных игр через свои подразделения ESL Gaming и InnoGames. С 2025 года компанией владеет Plarium."
-      position="Senior Frontend Developer"
+      position="Lead Frontend Developer"
       logo={isDarkMode ? <MTGLogoDark /> : <MTGLogoLight />}
     >
       <TooltipList>
+        <TooltipListItem
+          text={
+            <>
+              Веду менторство двух разработчиков уровня Middle, провожу
+              регулярные 1-on-1 сессии, код-ревью и помогаю с профессиональным
+              ростом, что повысило их продуктивность и техническую экспертизу
+              команды.
+            </>
+          }
+        />
+
+        <TooltipListItem
+          text={
+            <>
+              Интегрирую AI инструменты (
+              <Tooltip title="Инструмент для помощи разработчикам, использующий ИИ для автодополнения кода и генерации решений">
+                <span className="term">GitHub Copilot</span>
+              </Tooltip>
+              ) в рабочий процесс команды, что ускорило разработку и улучшило
+              качество кода.
+            </>
+          }
+        />
         <TooltipListItem
           text={
             <>
