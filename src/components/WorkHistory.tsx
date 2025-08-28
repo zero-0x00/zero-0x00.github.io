@@ -13,7 +13,7 @@ const WorkHistory = () => {
   const isMobile = useIsMobile();
   return (
     <SectionAccordion
-      title="Опыт работы"
+      title="Work experience"
       id="work-history"
       defaultExpanded={true}
       className={'section'}

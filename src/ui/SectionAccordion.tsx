@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 interface SectionAccordionProps {
-  title: string;
+  title: string | ReactNode;
   children: ReactNode;
   defaultExpanded?: boolean;
   id: string;

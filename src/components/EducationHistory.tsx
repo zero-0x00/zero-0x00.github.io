@@ -14,7 +14,7 @@ const EducationHistory = () => {
 
   return (
     <SectionAccordion
-      title="Образование"
+      title="Education"
       id="education"
       defaultExpanded={true}
       className={'section'}

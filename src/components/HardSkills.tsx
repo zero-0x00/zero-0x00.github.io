@@ -4,14 +4,13 @@ import CodeIcon from '@mui/icons-material/Code';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SpeedIcon from '@mui/icons-material/Speed';
 import StorageIcon from '@mui/icons-material/Storage';
-import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { useIsPrintMode } from '@hooks/useIsPrintMode';
 import SectionAccordion from '@ui/SectionAccordion';
+import SkillChip from '@ui/SkillChip';
 import Tooltip from '@ui/Tooltip';
 
 import {
@@ -21,17 +20,16 @@ import {
 } from './skills/skillsData';
 import { SkillCategory } from './skills/types';
 
-function Skills() {
+function HardSkills() {
   const getCategoryIcon = (category: SkillCategory) => {
     switch (category) {
-      case 'language':
       case 'framework':
         return <CodeIcon fontSize="small" />;
       case 'tool':
         return <SettingsIcon fontSize="small" />;
       case 'devops':
         return <StorageIcon fontSize="small" />;
-      case 'methodology':
+      case 'codeOrganization':
         return <ArchitectureIcon fontSize="small" />;
       case 'testing':
         return <BugReportIcon fontSize="small" />;
@@ -42,7 +40,7 @@ function Skills() {
   const isPrintMode = useIsPrintMode();
 
   return (
-    <SectionAccordion title="Навыки" id="skills" defaultExpanded={true}>
+    <SectionAccordion title="Hard skills" id="skills" defaultExpanded={true}>
       <Grid sx={{ mt: 1 }}>
         {categoryOrder.map(
           (category) =>
@@ -62,26 +60,12 @@ function Skills() {
                       key={index}
                       title={skill.description || skill.name}
                     >
-                      <Chip
+                      <SkillChip
                         label={skill.name}
-                        color={isPrintMode ? 'default' : skill.color}
-                        variant="outlined"
-                        avatar={
-                          skill.showIcon && !isPrintMode ? (
-                            <Avatar sx={{ bgcolor: 'transparent' }}>
-                              {getCategoryIcon(skill.category)}
-                            </Avatar>
-                          ) : undefined
-                        }
-                        sx={{
-                          m: 0.5,
-                          cursor: 'pointer',
-                          '&:hover': {
-                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                            transform: 'translateY(-2px)',
-                            transition: 'all 0.2s ease-in-out',
-                          },
-                        }}
+                        color={skill.color}
+                        showIcon={skill.showIcon}
+                        isPrintMode={isPrintMode}
+                        icon={getCategoryIcon(skill.category)}
                       />
                     </Tooltip>
                   ))}
@@ -94,4 +78,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default HardSkills;

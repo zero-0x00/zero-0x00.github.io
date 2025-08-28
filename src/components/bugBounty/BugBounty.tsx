@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
-// Импортируем PDF как URL
 import coderunPdfUrl from '@assets/coderun.pdf';
 import { useIsPrintMode } from '@hooks/useIsPrintMode';
 import SectionAccordion from '@ui/SectionAccordion';
@@ -31,7 +30,7 @@ function BugBounty() {
   return (
     <div className={'section'}>
       <SectionAccordion
-        title="Достижения и увлечения"
+        title="Achievements"
         id="bugbounty"
         defaultExpanded={true}
       >
@@ -65,7 +64,7 @@ function BugBounty() {
         </Box>
         <Box sx={{ mt: 2 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-            <Typography variant="body1" sx={{ mr: 2 }}>
+            <Typography variant="body1" sx={{ mr: 2 }} component={'span'}>
               {isPrintMode ? null : (
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                   <Typography variant="body1" sx={{ mr: 2 }}>

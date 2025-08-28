@@ -11,7 +11,7 @@ const Plarium = () => {
   return (
     <WorkTimelineItem
       period="Февраль 2016 — Октябрь 2017"
-      company="Plarium"
+      company="GoGame in Plarium"
       companyTooltip="Plarium — международная компания-разработчик мобильных и браузерных игр, основанная в 2009 году в Харькове (Украина). Создает стратегии, RPG и MMO игры. С 2017 года является частью австралийской корпорации Aristocrat Leisure Limited. C 2025 года вошла в состав группы компаний MTG"
       position="Middle Frontend Developer"
       logo={isDarkMode ? <PlariumLogoDark /> : <PlariumLogoLight />}

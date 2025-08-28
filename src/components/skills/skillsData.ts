@@ -2,25 +2,23 @@ import { SkillCategory, SkillDefinition } from './types';
 
 // Определение навыков, сгруппированных по категориям
 export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
-  language: [
-    {
-      name: 'Typescript',
-      category: 'language',
-      color: 'primary',
-      showIcon: true,
-      description:
-        'Строго типизированный надмножество JavaScript, добавляющий статическую типизацию',
-    },
-    {
-      name: 'JavaScript',
-      category: 'language',
-      color: 'primary',
-      showIcon: true,
-      description:
-        'Мультипарадигменный язык программирования для веб-разработки',
-    },
-  ],
   framework: [
+    {
+      name: 'Webpack',
+      category: 'framework',
+      showIcon: true,
+      color: 'info',
+      description:
+        'Сборщик модулей JavaScript, который создает бандлы для веб-приложений',
+    },
+    {
+      name: 'Vite',
+      category: 'framework',
+      showIcon: true,
+      color: 'info',
+      description:
+        'Современный сборщик фронтенд-проектов с быстрым холодным стартом и горячей заменой модулей',
+    },
     {
       name: 'Node.js',
       category: 'framework',
@@ -30,7 +28,7 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
         'Среда выполнения JavaScript на стороне сервера на основе движка V8',
     },
     {
-      name: 'ReactJS',
+      name: 'React (18+)',
       category: 'framework',
       color: 'info',
       showIcon: true,
@@ -52,6 +50,14 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
       showIcon: true,
       description:
         'Библиотека для создания диаграмм и графиков в React-приложениях',
+    },
+    {
+      name: 'D3',
+      category: 'framework',
+      color: 'info',
+      showIcon: true,
+      description:
+        'Мощная библиотека для визуализации данных и работы с графикой SVG, Canvas и HTML',
     },
     {
       name: 'Formik',
@@ -110,22 +116,6 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
   ],
   tool: [
     {
-      name: 'Webpack',
-      category: 'tool',
-      showIcon: true,
-      color: 'success',
-      description:
-        'Сборщик модулей JavaScript, который создает бандлы для веб-приложений',
-    },
-    {
-      name: 'Vite',
-      category: 'tool',
-      showIcon: true,
-      color: 'success',
-      description:
-        'Современный сборщик фронтенд-проектов с быстрым холодным стартом и горячей заменой модулей',
-    },
-    {
       name: 'SWC',
       category: 'tool',
       showIcon: true,
@@ -149,12 +139,35 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
       description: 'Клиент HTTP для браузера и Node.js на основе Promise API',
     },
     {
-      name: 'Lerna + nx',
+      name: 'Lerna',
       category: 'tool',
       showIcon: true,
       color: 'success',
       description:
-        'Инструменты для управления JavaScript-проектами с множеством пакетов',
+        'Инструмент для управления монорепозиториями JavaScript/TypeScript проектов',
+    },
+    {
+      name: 'nx',
+      category: 'tool',
+      showIcon: true,
+      color: 'success',
+      description:
+        'Мощный инструмент для монорепозиториев, сборки, тестирования и уп��авления зависимостями',
+    },
+    {
+      name: 'npm',
+      category: 'tool',
+      showIcon: true,
+      color: 'success',
+      description: 'Стандартный пакетный менеджер для Node.js',
+    },
+    {
+      name: 'yarn',
+      category: 'tool',
+      showIcon: true,
+      color: 'success',
+      description:
+        'Альтернативный быстрый и надёжный пакетный менеджер для JavaScript',
     },
     {
       name: 'GraphQL',
@@ -183,9 +196,26 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
     {
       name: 'git',
       category: 'tool',
+      showIcon: true,
       color: 'success',
       description:
         'Распределенная система контроля версий для отслеживания изменений в коде',
+    },
+    {
+      name: 'PWA',
+      category: 'tool',
+      showIcon: true,
+      color: 'success',
+      description:
+        'Подход к разработке веб-приложений, которые работают как нативные мобильные приложения',
+    },
+    {
+      name: 'Service Workers',
+      category: 'tool',
+      showIcon: true,
+      color: 'success',
+      description:
+        'Скрипты, работающие в фоне браузера для поддержки offline, push-уведомлений и кэширования ресурсов',
     },
   ],
   testing: [
@@ -198,12 +228,12 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
         'JavaScript-фреймворк для тестирования с акцентом на простоту использования',
     },
     {
-      name: 'React Testing Library',
+      name: 'Vitest',
       category: 'testing',
       showIcon: true,
       color: 'warning',
       description:
-        'Набор инструментов для тестирования React-компонентов, ориентированной на пользователя',
+        'Современный быстрый тестовый фреймворк для проектов на Vite, совместимый с Jest API',
     },
     {
       name: 'Playwright',
@@ -229,62 +259,55 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
       description:
         'Библиотека Node.js для управления браузером Chrome/Chromium через API протокола DevTools',
     },
-    {
-      name: 'TDD',
-      category: 'testing',
-      color: 'warning',
-      description:
-        'Методология разработки, при которой сначала пишутся тесты, а затем код, удовлетворяющий этим тестам',
-    },
-    {
-      name: 'BDD',
-      category: 'testing',
-      color: 'warning',
-      description:
-        'Методология разработки, основанная на поведении системы с точки зрения пользователя',
-    },
   ],
-  methodology: [
+  codeOrganization: [
     {
-      name: 'Progressive Web Apps',
-      category: 'methodology',
-      showIcon: true,
-      description:
-        'Подход к разработке веб-приложений, которые работают как нативные мобильные приложения',
-    },
-    {
-      name: 'REST API',
-      category: 'methodology',
-      description:
-        'Архитектурный стиль взаимодействия компонентов распределенного приложения через HTTP',
-    },
-    {
-      name: 'Web Performance',
-      category: 'methodology',
+      name: 'React Profiling',
+      category: 'codeOrganization',
       description:
         'Оптимизация веб-приложений для быстрой загрузки и отзывчивого интерфейса',
     },
     {
-      name: 'Agile',
-      category: 'methodology',
-      description: 'Гибкая методология разработки программного обеспечения',
-    },
-    {
-      name: 'Scrum',
-      category: 'methodology',
+      name: 'Code-Splitting',
+      category: 'codeOrganization',
       description:
-        'Гибкая методология для управления проектами, реализующий принципы Agile',
+        'Техника оптимизации загрузки, при которой код приложения разбивается на части, загружаемые по мере необходимости.',
     },
     {
-      name: 'Waterfall',
-      category: 'methodology',
-      description: 'Каскадная модель разработки программного обеспечения',
-    },
-    {
-      name: 'Kanban',
-      category: 'methodology',
+      name: 'Lazy-loading',
+      category: 'codeOrganization',
       description:
-        'Система организации разработки и управления проектами с акцентом на бережливое производство',
+        'Загрузка ресурсов или компонентов только тогда, когда они действительно нужны пользователю.',
+    },
+    {
+      name: 'Memoization',
+      category: 'codeOrganization',
+      description:
+        'Оптимизация производительности за счёт кеширования результатов вычислений функций.',
+    },
+    {
+      name: 'FSD (Feature-Sliced Design)',
+      category: 'codeOrganization',
+      description:
+        'Feature-Sliced Design — архитектурный подход для масштабируемых фронтенд-проектов.',
+    },
+    {
+      name: 'Atomic Design',
+      category: 'codeOrganization',
+      description:
+        'Atomic Design — методология проектирования интерфейсов на основе атомарных компонентов.',
+    },
+    {
+      name: 'Component-Based Architecture',
+      category: 'codeOrganization',
+      description:
+        'Component-based architecture — организация кода на основе переиспользуемых компонентов.',
+    },
+    {
+      name: 'Layered / Clean / Hexagonal Architecture',
+      category: 'codeOrganization',
+      description:
+        'Layered architecture — разделение приложения на слои (presentation, domain, data и т.д.).',
     },
   ],
   devops: [
@@ -311,6 +334,14 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
       showIcon: true,
       description:
         'Платформа для мониторинга и анализа метрик с возможностью создания информативных дашбордов',
+    },
+    {
+      name: 'HashiCorp Consul',
+      category: 'devops',
+      color: 'pending', // используем наш кастомный цвет
+      showIcon: true,
+      description:
+        'Система сервис-дискавери и управления конфигурацией для микросервисной архитектуры',
     },
     {
       name: 'Sentry',
@@ -351,34 +382,60 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
       description:
         'Платформа для разработки, доставки и запуска приложений в контейнерах',
     },
-    {
-      name: 'CI/CD',
-      category: 'devops',
-      color: 'pending', // используем наш кастомный цвет
-      description:
-        'Непрерывная интеграция и непрерывная доставка - практики автоматизации разработки',
-    },
   ],
   bugbounty: [],
 };
 
 // Названия категорий для отображения
 export const categoryNames: Record<SkillCategory, string> = {
-  language: 'Языки программирования',
-  framework: 'Фреймворки и библиотеки',
+  framework: 'Основной стек',
+  codeOrganization: 'Организация кода',
   tool: 'Инструменты',
   devops: 'DevOps',
-  methodology: 'Методологии',
   testing: 'Тестирование',
   bugbounty: 'Bug Bounty',
 };
 
 // Порядок отображения категорий
 export const categoryOrder: SkillCategory[] = [
-  'language',
   'framework',
+  'codeOrganization',
   'tool',
   'testing',
   'devops',
-  'methodology',
+];
+
+// Soft Skills вынесены отдельно
+export const softSkills: {
+  name: string;
+  category: string;
+  description?: string;
+}[] = [
+  {
+    name: 'Teamwork, mentoring, and knowledge sharing',
+    category: 'softskills',
+    description: 'Командная работа, наставничество и передача опыта.',
+  },
+  {
+    name: 'Task evaluation, decomposition, and delivery',
+    category: 'softskills',
+    description:
+      'Умение оценивать задачи, декомпозировать и доводить до результата.',
+  },
+  {
+    name: 'Communication with analysts, designers, and backend team',
+    category: 'softskills',
+    description: 'Коммуникация с аналитиками, дизайнерами, backend-командой.',
+  },
+  {
+    name: 'Responsibility for product and code quality',
+    category: 'softskills',
+    description: 'Ответственность за качество продукта и код.',
+  },
+  {
+    name: 'Willingness to participate in architecture, technology selection, and standards',
+    category: 'softskills',
+    description:
+      'Готовность участвовать в архитектурных решениях, выбирать технологии и устанавливать стандарты.',
+  },
 ];

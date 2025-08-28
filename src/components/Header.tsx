@@ -1,3 +1,6 @@
+import CodeIcon from '@mui/icons-material/Code';
+import DataArrayIcon from '@mui/icons-material/DataArray';
+import DataObjectIcon from '@mui/icons-material/DataObject';
 import EmailIcon from '@mui/icons-material/Email';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -12,6 +15,7 @@ import avatarImage from '@assets/avatar.jpg';
 import QRSVG from '@assets/qr.svg';
 import { useIsMobile } from '@hooks/useIsMobile';
 import { useIsPrintMode } from '@hooks/useIsPrintMode';
+import SkillChip from '@ui/SkillChip';
 import Tooltip from '@ui/Tooltip';
 
 const HeaderGrid = styled(Grid)(() => ({
@@ -58,16 +62,41 @@ function Header() {
             />
           </Grid>
           <Grid
-            size={{ xs: 7, md: 5 }}
+            size={{ xs: 7, md: 7 }}
             container
             direction={'column'}
             justifyContent={'center'}
             sx={{ px: 2 }}
-            spacing={isPrintMode ? 1 : 2}
+            spacing={isPrintMode ? 1 : 0}
           >
-            <Typography variant={'h6'}>Резюме</Typography>
-            <Typography variant={'h4'}>Максим Бугай</Typography>
-            <Typography variant={'h5'}>Senior Frontend Developer</Typography>
+            <Typography variant={'h4'}>Senior Frontend Developer</Typography>
+            <Typography variant={'h5'}>Максим Бугай</Typography>
+            <Typography variant={'caption'}>
+              Офис/Гибрид/Удалённо (Москва СЗАО/ЗАО) | Гражданство РФ | 33 года
+            </Typography>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0, ml: -1 }}>
+              <SkillChip
+                label={'JavaScript (ES6+)'}
+                variant={'filled'}
+                showIcon={true}
+                isPrintMode={isPrintMode}
+                icon={<DataObjectIcon fontSize="small" />}
+              />
+              <SkillChip
+                label={'TypeScript (5.9+)'}
+                variant={'filled'}
+                showIcon={true}
+                isPrintMode={isPrintMode}
+                icon={<DataArrayIcon fontSize="small" />}
+              />
+              <SkillChip
+                label={'React (18+)'}
+                variant={'filled'}
+                showIcon={true}
+                isPrintMode={isPrintMode}
+                icon={<CodeIcon fontSize="small" />}
+              />
+            </Box>
             {isPrintMode && (
               <Box
                 sx={{ position: 'absolute', top: 0, right: 0, zIndex: 1000 }}
@@ -78,7 +107,7 @@ function Header() {
           </Grid>
 
           <Grid
-            size={{ xs: 12, md: 5 }}
+            size={{ xs: 12, md: 3 }}
             alignItems={'flex-start'}
             justifyContent={isMobile ? 'flex-start' : 'flex-end'}
             container

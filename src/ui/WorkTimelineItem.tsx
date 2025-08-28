@@ -114,9 +114,9 @@ const WorkTimelineItem = ({
               }}
             >
               <Typography
-                variant="h6"
+                variant="body1"
                 component="div"
-                sx={{ fontWeight: 'bold' }}
+                sx={{ fontWeight: 'bold', lineHeight: 2, textAligns: 'left' }}
               >
                 {renderCompanyName()}
               </Typography>

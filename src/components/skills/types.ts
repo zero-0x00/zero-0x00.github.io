@@ -1,10 +1,9 @@
 // Типы для категорий навыков
 export type SkillCategory =
-  | 'language'
   | 'framework'
   | 'tool'
   | 'devops'
-  | 'methodology'
+  | 'codeOrganization'
   | 'testing'
   | 'bugbounty';
 

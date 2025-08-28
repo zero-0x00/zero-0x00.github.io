@@ -5,8 +5,9 @@ import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
 
 import EducationHistory from '@components/EducationHistory.tsx';
+import HardSkills from '@components/HardSkills.tsx';
 import Header from '@components/Header.tsx';
-import Skills from '@components/Skills.tsx';
+import SoftSkills from '@components/SoftSkills.tsx';
 import WordHistory from '@components/WorkHistory.tsx';
 import BugBounty from '@components/bugBounty/BugBounty.tsx';
 import { useIsMobile } from '@hooks/useIsMobile.tsx';
@@ -41,7 +42,7 @@ function App() {
   return (
     <div className={isMobile ? 'mobile' : ''}>
       <Container
-        maxWidth="md"
+        maxWidth="lg"
         className={isPrintMode ? 'print-container' : ''}
         sx={{ mt: 1, mb: 4 }}
       >
@@ -62,7 +63,8 @@ function App() {
         )}
 
         <Header />
-        <Skills />
+        <HardSkills />
+        <SoftSkills />
         <WordHistory />
         <EducationHistory />
         <BugBounty />
