@@ -39,30 +39,29 @@ function Header() {
         </Typography>
       </Grid>
       <Grid container spacing={isPrintMode ? 0 : 2} sx={{ my: 2 }}>
-        <HeaderGrid
-          container
-          sx={{ width: '100%' }}
-          direction={isMobile ? 'row-reverse' : 'row'}
-        >
+        <HeaderGrid container sx={{ width: '100%' }} direction={'row'}>
+          {!isMobile ? (
+            <Grid
+              size={{ xs: 2, md: 2 }}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Avatar
+                src={avatarImage}
+                sx={
+                  isMobile
+                    ? { width: 96, height: 96 }
+                    : { width: 128, height: 128 }
+                }
+              />
+            </Grid>
+          ) : null}
+
           <Grid
-            size={{ xs: 2, md: 2 }}
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Avatar
-              src={avatarImage}
-              sx={
-                isMobile
-                  ? { width: 96, height: 96 }
-                  : { width: 128, height: 128 }
-              }
-            />
-          </Grid>
-          <Grid
-            size={{ xs: 10, md: 10 }}
+            size={{ xs: 9, md: 9 }}
             container
             direction={'column'}
             justifyContent={'center'}
@@ -70,11 +69,12 @@ function Header() {
             spacing={isPrintMode ? 1 : 0}
           >
             <Typography variant={'h4'}>
-              Senior/Lead Frontend Developer
+              Senior / Lead Frontend Developer
             </Typography>
             <Typography variant={'h5'}>Максим Бугай</Typography>
             <Typography variant={'caption'}>
-              Офис/Гибрид/Удалённо (Москва СЗАО/ЗАО) | Гражданство РФ | 33 года
+              Офис / Гибрид / Удалённо (Москва СЗАО/ЗАО) | Гражданство РФ | 33
+              года
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0, ml: -1 }}>
               <SkillChip
@@ -114,7 +114,7 @@ function Header() {
           </Grid>
 
           <Grid
-            size={{ xs: 12, md: 3 }}
+            size={{ xs: 12, md: 1 }}
             alignItems={'flex-start'}
             justifyContent={isMobile ? 'flex-start' : 'flex-end'}
             container
