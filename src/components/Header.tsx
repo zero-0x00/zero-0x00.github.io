@@ -45,7 +45,7 @@ function Header() {
           direction={isMobile ? 'row-reverse' : 'row'}
         >
           <Grid
-            size={{ xs: 5, md: 2 }}
+            size={{ xs: 2, md: 2 }}
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -62,7 +62,7 @@ function Header() {
             />
           </Grid>
           <Grid
-            size={{ xs: 7, md: 7 }}
+            size={{ xs: 10, md: 10 }}
             container
             direction={'column'}
             justifyContent={'center'}
@@ -99,7 +99,12 @@ function Header() {
             </Box>
             {isPrintMode && (
               <Box
-                sx={{ position: 'absolute', top: 0, right: 0, zIndex: 1000 }}
+                sx={{
+                  position: 'absolute',
+                  top: 50,
+                  right: 14,
+                  zIndex: 1000,
+                }}
               >
                 <QRSVG />
               </Box>
