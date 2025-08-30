@@ -62,10 +62,8 @@ const MTG = () => {
         <TooltipListItem
           text={
             <>
-              Разрабатываю UI интерфейс для чатбота с
-              <Tooltip title="Мультимодальная языковая модель от Google, способная генерировать текст, анализировать изображения и выполнять сложные задачи ИИ">
-                <span className="term">Gemini AI</span>
-              </Tooltip>
+              Разрабатываю UI интерфейс для интеграции AI в аналитические
+              инструменты
             </>
           }
         />
@@ -76,7 +74,7 @@ const MTG = () => {
               <Tooltip title="Систематический процесс проверки кода другими разработчиками для выявления ошибок, улучшения качества и обмена знаниями">
                 <span className="term">Code Review</span>
               </Tooltip>
-              , выполняю сборку и поддержку UI релизов через
+              , one-to-one, выполняю сборку и поддержку UI релизов через
               <Tooltip title="Инструмент непрерывной интеграции и доставки (CI/CD), автоматизирующий процессы сборки и развертывания">
                 <span className="term">Jenkins</span>
               </Tooltip>
@@ -86,23 +84,7 @@ const MTG = () => {
         />
 
         <TooltipListItem
-          text={
-            <>
-              Занимаюсь рефакторингом монорепозитория UI пакетов и миграцией на
-              <Tooltip title="Строго типизированный язык программирования, расширяющий JavaScript добавлением статической типизации, интерфейсов и других возможностей">
-                <span className="term">TypeScript</span>
-              </Tooltip>
-              и
-              <Tooltip title="Современный инструмент сборки, предлагающий быструю разработку с горячей перезагрузкой и оптимизированную сборку для продакшена">
-                <span className="term">Vite</span>
-              </Tooltip>
-              (
-              <Tooltip title="Speedy Web Compiler - быстрая альтернатива Babel для транспиляции JavaScript/TypeScript, написанная на Rust">
-                <span className="term">SWC</span>
-              </Tooltip>
-              )
-            </>
-          }
+          text={<>Занимаюсь разработкой монорепозитория Typescript UI kit</>}
         />
 
         <TooltipListItem
@@ -160,7 +142,8 @@ const MTG = () => {
               <Tooltip title="Компонент таблицы с расширенной функциональностью для Material UI, поддерживающий большие наборы данных, фильтрацию и сортировку">
                 <span className="term">MUI X-Data-Grid</span>
               </Tooltip>
-              с помощью инструментов профилирования, дробления chunks и
+              с помощью инструментов профилирования, дробления chunks,
+              tree-shaking и
               <Tooltip title="Техника оптимизации, которая удаляет неиспользуемый код из финальной сборки, значительно уменьшая её размер">
                 <span className="term">tree-shaking</span>
               </Tooltip>

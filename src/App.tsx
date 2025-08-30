@@ -4,6 +4,7 @@ import PrintIcon from '@mui/icons-material/Print';
 import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
 
+import AboutMe from '@components/AboutMe.tsx';
 import EducationHistory from '@components/EducationHistory.tsx';
 import HardSkills from '@components/HardSkills.tsx';
 import Header from '@components/Header.tsx';
@@ -63,6 +64,7 @@ function App() {
         )}
 
         <Header />
+        <AboutMe />
         <HardSkills />
         <SoftSkills />
         <WordHistory />
