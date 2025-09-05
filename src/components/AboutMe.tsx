@@ -6,14 +6,13 @@ function AboutMe() {
   return (
     <SectionAccordion title="About Me" id="soft-skills" defaultExpanded={true}>
       <Box sx={{ mt: 1 }}>
-        Senior Frontend-разработчик (React, TypeScript) с более чем 8 лет опыта,
-        специализируюсь на создании масштабируемых, высокопроизводительных и
-        оптимизированных SPA. Имею опыт внедрения CI/CD, code splitting и lazy
-        loading. Занимался менторством 2х frontend-разработчиков, регулярно
-        провожу Code Review, one-to-one и Performance Review. Эксперт в
-        оптимизации производительности (Web Vitals, memoization), разработке
-        PWA, доступности (a11y) и написании чистого кода. Ориентирован на
-        результат, менторство и построение технически зрелых frontend-решений.
+        Senior Frontend-разработчик с 8.5+ лет опыта во Frontend.
+        Специализируюсь на React/Typescript/NodeJS/SocketIO/Vite/Webpack. Имею
+        опыт выступлений на IT-конференциях. Занимаюсь менторством, регулярно
+        провожу Code Review и занимаюсь рефакторингом. Имею опыт внедрения
+        CI/CD, Code Splitting и Lazy Loading. Применяю на практике лучшие
+        методологии: DRY, YAGNI, KISS, SOLID, YAGNI и SMART. Эффективно нахожу
+        баланс в архитектуре между Clean Architecture и Feature-Sliced Design.
       </Box>
     </SectionAccordion>
   );
