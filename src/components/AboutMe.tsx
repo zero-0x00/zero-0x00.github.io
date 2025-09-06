@@ -4,15 +4,20 @@ import SectionAccordion from '@ui/SectionAccordion';
 
 function AboutMe() {
   return (
-    <SectionAccordion title="About Me" id="soft-skills" defaultExpanded={true}>
+    <SectionAccordion
+      title="About Me"
+      id="soft-skills"
+      defaultExpanded={true}
+      className={'text-wide'}
+    >
       <Box sx={{ mt: 1 }}>
-        Senior Frontend-разработчик с 8.5+ лет опыта во Frontend.
-        Специализируюсь на React/Typescript/NodeJS/SocketIO/Vite/Webpack. Имею
-        опыт выступлений на IT-конференциях. Занимаюсь менторством, регулярно
-        провожу Code Review и занимаюсь рефакторингом. Имею опыт внедрения
-        CI/CD, Code Splitting и Lazy Loading. Применяю на практике лучшие
-        методологии: DRY, YAGNI, KISS, SOLID, YAGNI и SMART. Эффективно нахожу
-        баланс в архитектуре между Clean Architecture и Feature-Sliced Design.
+        Senior Frontend-разработчик с 16+ годами опыта, из них 8.5 года во
+        Frontend. Специализируюсь на React, Typescript, NodeJS, SocketIO, Vite,
+        Webpack. Выступаю на IT-конференциях, занимаюсь менторством, регулярно
+        провожу Code Review и рефакторинг. Внедряю CI/CD, Code Splitting и Lazy
+        Loading. Активно применяю лучшие практики: DRY, YAGNI, KISS, SOLID,
+        SMART. Умею находить баланс между Clean Architecture и Feature-Sliced
+        Design.
       </Box>
     </SectionAccordion>
   );

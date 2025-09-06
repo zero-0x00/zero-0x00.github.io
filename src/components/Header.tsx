@@ -1,13 +1,9 @@
-import CodeIcon from '@mui/icons-material/Code';
-import DataArrayIcon from '@mui/icons-material/DataArray';
-import DataObjectIcon from '@mui/icons-material/DataObject';
 import EmailIcon from '@mui/icons-material/Email';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Avatar from '@mui/material/Avatar';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
@@ -15,7 +11,6 @@ import avatarImage from '@assets/avatar.jpg';
 import QRSVG from '@assets/qr.svg';
 import { useIsMobile } from '@hooks/useIsMobile';
 import { useIsPrintMode } from '@hooks/useIsPrintMode';
-import SkillChip from '@ui/SkillChip';
 import Tooltip from '@ui/Tooltip';
 
 const HeaderGrid = styled(Grid)(() => ({
@@ -30,137 +25,134 @@ function Header() {
   const isMobile = useIsMobile();
   return (
     <>
-      <Grid className={'print'}>
-        <Typography variant="body2" align={'center'}>
-          Интерактивная версия резюме:&nbsp;
-          <Link href={'https://zero-0x00.github.io/'} variant="body2">
-            https://zero-0x00.github.io/
-          </Link>
-        </Typography>
-      </Grid>
-      <Grid container spacing={isPrintMode ? 0 : 2} sx={{ my: 2 }}>
+      <Grid container sx={{ my: 2 }}>
         <HeaderGrid container sx={{ width: '100%' }} direction={'row'}>
-          {!isMobile ? (
-            <Grid
-              size={{ xs: 2, md: 2 }}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <Avatar
-                src={avatarImage}
-                sx={
-                  isMobile
-                    ? { width: 96, height: 96 }
-                    : { width: 128, height: 128 }
-                }
-              />
-            </Grid>
-          ) : null}
+          <Grid
+            size={isPrintMode ? { xs: 3 } : { xs: 2, md: 2 }}
+            alignItems={'center'}
+            justifyContent={'center'}
+          >
+            <Avatar
+              src={avatarImage}
+              sx={
+                isMobile
+                  ? { width: 96, height: 96 }
+                  : { width: 136, height: 136 }
+              }
+            />
+          </Grid>
 
           <Grid
-            size={{ xs: 9, md: 9 }}
+            size={isPrintMode ? { xs: 6 } : { xs: 8, md: 6 }}
             container
             direction={'column'}
-            justifyContent={'center'}
-            sx={{ px: 2 }}
+            justifyContent={'start'}
+            sx={{ px: isPrintMode ? 0 : 2 }}
             spacing={isPrintMode ? 1 : 0}
           >
-            <Typography variant={'h4'}>Senior Frontend Developer</Typography>
-            <Typography variant={'h5'}>Максим Бугай</Typography>
-            <Typography variant={'caption'}>
-              Гибрид / Удалённо (Москва СЗАО/ЗАО) | Гражданство РФ | 33 года
+            <Typography variant={isMobile ? 'subtitle1' : 'h5'}>
+              Senior Frontend Developer
             </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0, ml: -1 }}>
-              <SkillChip
-                label={'JavaScript (ES6+)'}
-                variant={'filled'}
-                showIcon={true}
-                isPrintMode={isPrintMode}
-                icon={<DataObjectIcon fontSize="small" />}
-              />
-              <SkillChip
-                label={'TypeScript (5.9+)'}
-                variant={'filled'}
-                showIcon={true}
-                isPrintMode={isPrintMode}
-                icon={<DataArrayIcon fontSize="small" />}
-              />
-              <SkillChip
-                label={'React (18+)'}
-                variant={'filled'}
-                showIcon={true}
-                isPrintMode={isPrintMode}
-                icon={<CodeIcon fontSize="small" />}
-              />
-            </Box>
-            {isPrintMode && (
-              <Box
-                sx={{
-                  position: 'absolute',
-                  top: 50,
-                  right: 14,
-                  zIndex: 1000,
-                }}
-              >
-                <QRSVG />
-              </Box>
-            )}
-          </Grid>
+            <Typography variant={isMobile ? 'subtitle2' : 'h6'}>
+              Максим Бугай
+            </Typography>
 
-          <Grid
-            size={{ xs: 12, md: 1 }}
-            alignItems={'flex-start'}
-            justifyContent={isMobile ? 'flex-start' : 'flex-end'}
-            container
-            sx={{ px: isPrintMode ? 2 : isMobile ? 2 : 1 }}
-          >
-            <Grid>
-              <Box
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'end',
-                  gap: isMobile ? 3 : 2,
-                }}
-              >
-                <Link
-                  href="https://t.me/Engineer586898"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color="inherit"
-                  aria-label="Telegram"
-                >
-                  <Tooltip title="Telegram">
-                    <TelegramIcon fontSize={isMobile ? 'large' : 'small'} />
-                  </Tooltip>
-                </Link>
-                <Link
-                  href="https://wa.me/79180584679"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color="inherit"
-                  aria-label="WhatsApp"
-                >
-                  <Tooltip title="WhatsApp">
-                    <WhatsAppIcon fontSize={isMobile ? 'large' : 'small'} />
-                  </Tooltip>
-                </Link>
-                <Link
-                  href="mailto:marvelsrp@yandex.ru"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color="inherit"
-                  aria-label="WhatsApp"
-                >
-                  <Tooltip title={'Email'}>
-                    <EmailIcon fontSize={isMobile ? 'large' : 'small'} />
-                  </Tooltip>
-                </Link>
-              </Box>
+            <Grid
+              alignItems={'flex-start'}
+              justifyContent={'flex-start'}
+              container
+              sx={{
+                px: { xs: isPrintMode ? 0 : 1, md: 0 },
+              }}
+            >
+              <Grid container direction={'row'} spacing={1} sx={{ pt: 1 }}>
+                <Grid size={{ xs: 12, md: isPrintMode ? 6 : 12 }}>
+                  <Link
+                    href="https://t.me/Engineer586898"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="inherit"
+                    aria-label="Telegram"
+                  >
+                    <Tooltip title="Telegram">
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <TelegramIcon sx={{ fontSize: '16px' }} />
+                        <Typography variant={'caption'}>
+                          @Engineer586898
+                        </Typography>
+                      </Stack>
+                    </Tooltip>
+                  </Link>
+                </Grid>
+                <Grid size={{ xs: 12, md: isPrintMode ? 6 : 12 }}>
+                  <Link
+                    href="mailto:marvelsrp@yandex.ru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="inherit"
+                    aria-label="WhatsApp"
+                  >
+                    <Tooltip title={'Email'}>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <EmailIcon sx={{ fontSize: '16px' }} />
+                        <Typography variant={'caption'}>
+                          marvelsrp@yandex.ru
+                        </Typography>
+                      </Stack>
+                    </Tooltip>
+                  </Link>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
+          {isPrintMode && (
+            <Grid
+              container
+              alignItems={'end'}
+              size={{ xs: 3 }}
+              justifyContent={'end'}
+              // className={'print'}
+            >
+              <Grid>
+                <QRSVG />
+              </Grid>
+            </Grid>
+          )}
+          {isPrintMode ? (
+            <Grid
+              size={{ xs: 12 }}
+              container
+              direction={'row'}
+              justifyContent={'start'}
+              alignItems={'center'}
+              sx={{ px: 0, pt: 1 }}
+              spacing={1}
+            >
+              <Typography variant={'caption'}>
+                Удалённо / Гибрид (Москва) | 33 года | Желаемая вилка оклада: от
+                350 000 ₽
+              </Typography>
+            </Grid>
+          ) : (
+            <Grid
+              size={{ xs: 12, md: 4 }}
+              container
+              direction={'column'}
+              justifyContent={'start'}
+              alignItems={isMobile ? 'start' : 'end'}
+              sx={{ px: 2 }}
+            >
+              <Typography variant={'caption'}>
+                Удалённо / Гибрид (Москва) | 33 года
+              </Typography>
+              <Typography
+                variant={'caption'}
+                sx={{ fontWeight: 500, color: 'success.main', mt: 0.5 }}
+              >
+                Желаемая вилка оклада: от 350 000 ₽
+              </Typography>
+            </Grid>
+          )}
         </HeaderGrid>
       </Grid>
     </>

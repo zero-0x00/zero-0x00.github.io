@@ -16,7 +16,6 @@ const WorkHistory = () => {
       title="Work experience"
       id="work-history"
       defaultExpanded={true}
-      className={'section'}
     >
       <Timeline
         position={isMobile || isPrintMode ? 'left' : 'alternate-reverse'}

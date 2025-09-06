@@ -15,7 +15,7 @@ const TooltipListItem = ({ text, sx }: TooltipListItemProps) => {
     <ListItem sx={{ display: 'list-item', ...sx }}>
       <ListItemText
         primary={
-          <Typography component="span" variant="body2" className="techText">
+          <Typography variant="body2" className="techText" align={'justify'}>
             {text}
           </Typography>
         }

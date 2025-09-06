@@ -13,6 +13,7 @@ const Other = () => {
       position="Junior Frontend Developer"
       logo={<WorkHistoryIcon fontSize={'large'} />}
       isLast={true}
+      className={'section'}
     >
       <TooltipList>
         <TooltipListItem
@@ -48,23 +49,18 @@ const Other = () => {
         <TooltipListItem
           text={
             <>
-              Занимался разработкой
-              <Tooltip title="Пользовательский интерфейс">
-                <span className="term">UI</span>
-              </Tooltip>
-              для нескольких лендингов используя
-              <Tooltip title="Язык разметки веб-страниц">
-                <span className="term">HTML</span>
-              </Tooltip>
-              ,
-              <Tooltip title="Язык таблиц стилей для описания внешнего вида документа">
-                <span className="term">CSS</span>
-              </Tooltip>
-              и
-              <Tooltip title="Язык программирования, используемый для создания интерактивных элементов на веб-страницах">
-                <span className="term">JavaScript</span>
-              </Tooltip>
-              .
+              Автоматизировал процессы тестирования и деплоя, что позволило
+              команде быстрее выпускать новые версии продуктов и снизить
+              количество ошибок на продакшн.
+            </>
+          }
+        />
+
+        <TooltipListItem
+          text={
+            <>
+              Внедрил современные подходы к разработке UI, что повысило качество
+              интерфейсов и упростило поддержку проектов.
             </>
           }
         />

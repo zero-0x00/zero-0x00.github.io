@@ -113,6 +113,38 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
       description:
         'Библиотека для двунаправленной связи в реальном времени между клиентами и сервером через WebSockets',
     },
+    {
+      name: 'i18n / l10n',
+      category: 'framework',
+      showIcon: true,
+      color: 'info',
+      description:
+        'Опыт локализации и интернационализации интерфейсов для международных проектов',
+    },
+    {
+      name: 'REST API',
+      category: 'framework',
+      showIcon: true,
+      color: 'info',
+      description:
+        'Интеграция с REST API, проектирование и реализация клиентских запросов',
+    },
+    {
+      name: 'PWA / SPA / Mobile Integration',
+      category: 'framework',
+      showIcon: true,
+      color: 'info',
+      description:
+        'Разработка и интеграция Progressive Web Apps, SPA и мобильных решений',
+    },
+    {
+      name: 'Accessibility (a11y)',
+      category: 'framework',
+      showIcon: true,
+      color: 'info',
+      description:
+        'Внедрение доступности интерфейсов: семантика, навигация, поддержка скринридеров',
+    },
   ],
   tool: [
     {
@@ -286,28 +318,16 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
         'Оптимизация производительности за счёт кеширования результатов вычислений функций.',
     },
     {
-      name: 'FSD (Feature-Sliced Design)',
+      name: 'FSD',
       category: 'codeOrganization',
       description:
         'Feature-Sliced Design — архитектурный подход для масштабируемых фронтенд-проектов.',
     },
     {
-      name: 'Atomic Design',
+      name: 'Clean Architecture',
       category: 'codeOrganization',
       description:
-        'Atomic Design — методология проектирования интерфейсов на основе атомарных компонентов.',
-    },
-    {
-      name: 'Component-Based Architecture',
-      category: 'codeOrganization',
-      description:
-        'Component-based architecture — организация кода на основе переиспользуемых компонентов.',
-    },
-    {
-      name: 'Layered / Clean / Hexagonal Architecture',
-      category: 'codeOrganization',
-      description:
-        'Layered architecture — разделение приложения на слои (presentation, domain, data и т.д.).',
+        'Архитектурный подход, обеспечивающий разделение ответственности, масштабируемость и тестируемость фронтенд-приложений.',
     },
   ],
   devops: [
@@ -382,6 +402,14 @@ export const skillsByCategory: Record<SkillCategory, SkillDefinition[]> = {
       description:
         'Платформа для разработки, доставки и запуска приложений в контейнерах',
     },
+    {
+      name: 'GKE',
+      category: 'devops',
+      showIcon: true,
+      color: 'pending',
+      description:
+        'Опыт работы с облачными сервисами, деплой и масштабирование приложений в Google Kubernetes Engine',
+    },
   ],
   bugbounty: [],
 };
@@ -412,30 +440,42 @@ export const softSkills: {
   description?: string;
 }[] = [
   {
-    name: 'Teamwork, mentoring, and knowledge sharing',
-    category: 'softskills',
-    description: 'Командная работа, наставничество и передача опыта.',
-  },
-  {
-    name: 'Task evaluation, decomposition, and delivery',
+    name: 'Умею работать в команде, делиться знаниями и помогать коллегам',
     category: 'softskills',
     description:
-      'Умение оценивать задачи, декомпозировать и доводить до результата.',
+      'Работаю вместе с командой, делюсь опытом и поддерживаю коллег.',
   },
   {
-    name: 'Communication with analysts, designers, and backend team',
+    name: 'Оцениваю задачи, разбиваю их на части и довожу до результата',
     category: 'softskills',
-    description: 'Коммуникация с аналитиками, дизайнерами, backend-командой.',
+    description: 'Беру задачи, декомпозирую и довожу до результата.',
   },
   {
-    name: 'Responsibility for product and code quality',
-    category: 'softskills',
-    description: 'Ответственность за качество продукта и код.',
-  },
-  {
-    name: 'Willingness to participate in architecture, technology selection, and standards',
+    name: 'Легко общаюсь с аналитиками, дизайнерами и backend-разработчиками',
     category: 'softskills',
     description:
-      'Готовность участвовать в архитектурных решениях, выбирать технологии и устанавливать стандарты.',
+      'Свободно взаимодействую с аналитиками, дизайнерами и backend-командой.',
+  },
+  {
+    name: 'Беру ответственность за качество продукта и кода',
+    category: 'softskills',
+    description: 'Отвечаю за качество продукта и кода.',
+  },
+  {
+    name: 'Готов участвовать в архитектурных решениях, выбирать технологии и задавать стандарты',
+    category: 'softskills',
+    description: 'Участвую в выборе архитектуры, технологий и стандартов.',
+  },
+  {
+    name: 'Умею организовывать работу команды, мотивировать и развивать коллег',
+    category: 'softskills',
+    description:
+      'Помогаю команде достигать целей, поддерживаю рост и развитие сотрудников, беру на себя лидерские задачи.',
+  },
+  {
+    name: 'Умею принимать решения и брать ответственность за результат',
+    category: 'softskills',
+    description:
+      'Принимаю стратегические решения, оцениваю риски и отвечаю за успех проекта.',
   },
 ];

@@ -4,6 +4,7 @@ import PrintIcon from '@mui/icons-material/Print';
 import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
 
+import resumePDFUrl from '@assets/resume.pdf';
 import AboutMe from '@components/AboutMe.tsx';
 import EducationHistory from '@components/EducationHistory.tsx';
 import HardSkills from '@components/HardSkills.tsx';
@@ -36,10 +37,9 @@ function App() {
   }, [isPrintMode]);
 
   const handlePrint = () => {
-    const currentUrl = window.location.href.split('?')[0];
-    window.open(`${currentUrl}?print`, '_blank');
+    window.open(resumePDFUrl, '_blank');
   };
-  const isStandardView = !isPrintMode && !isMobile;
+  const isStandardView = !isPrintMode;
   return (
     <div className={isMobile ? 'mobile' : ''}>
       <Container
@@ -55,8 +55,8 @@ function App() {
             onClick={handlePrint}
             sx={{
               position: 'fixed',
-              right: '16px',
-              top: '16px',
+              bottom: '16px',
+              right: 'calc(16px + 48px)',
             }}
           >
             <PrintIcon />

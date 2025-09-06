@@ -5,7 +5,6 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import Fab from '@mui/material/Fab';
 import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
 
-import { useIsMobile } from '@hooks/useIsMobile.tsx';
 import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
 
 import { ThemeContext } from './ThemeContext.tsx';
@@ -20,12 +19,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     }
     return true;
   });
-  const isMobile = useIsMobile();
   const isPrintMode = useIsPrintMode();
   const handleToggleTheme = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
-  const isStandardView = !isPrintMode && !isMobile;
+  const isStandardView = !isPrintMode;
   return (
     <MUIThemeProvider
       theme={isDarkMode ? darkPalette : lightPalette}

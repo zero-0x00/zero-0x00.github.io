@@ -15,6 +15,7 @@ const Plarium = () => {
       companyTooltip="Plarium — международная компания-разработчик мобильных и браузерных игр, основанная в 2009 году в Харькове (Украина). Создает стратегии, RPG и MMO игры. С 2017 года является частью австралийской корпорации Aristocrat Leisure Limited. C 2025 года вошла в состав группы компаний MTG"
       position="Middle Frontend Developer"
       logo={isDarkMode ? <PlariumLogoDark /> : <PlariumLogoLight />}
+      className={'section'}
     >
       <TooltipList>
         <TooltipListItem
@@ -24,7 +25,9 @@ const Plarium = () => {
               <Tooltip title="Крупнейшая JavaScript-конференция в Украине, объединяющая фронтенд-разработчиков">
                 <span className="term">KharkivJS</span>
               </Tooltip>{' '}
-              по вопросам UX и UI в веб-приложениях.
+              по вопросам UX и UI в веб-приложениях, делился практическими
+              кейсами и помогал коллегам внедрять лучшие решения в продуктах
+              компании.
             </>
           }
         />
@@ -32,16 +35,18 @@ const Plarium = () => {
         <TooltipListItem
           text={
             <>
-              Оптимизировал трансформации данных в NodeJS API Gateway, создав
+              Оптимизировал трансформации данных в NodeJS API Gateway, создал
               open-source библиотеку
               <Tooltip title="Библиотека для преобразования и фильтрации данных API на лету">
                 <span className="term">apop</span>
               </Tooltip>
+              , что позволило ускорить обработку запросов и повысить
+              стабильность работы сервисов.
             </>
           }
         />
 
-        <TooltipListItem text="Провел аналитическое исследование конфликтов permissions пользователей в проекте." />
+        <TooltipListItem text="Провел аналитическое исследование конфликтов permissions пользователей, выявил и устранил критические ошибки, повысив безопасность и прозрачность доступа в проекте." />
 
         <TooltipListItem
           text={
@@ -55,6 +60,8 @@ const Plarium = () => {
               <Tooltip title="Сборщик модулей JavaScript, который создает бандлы для веб-приложений">
                 <span className="term">Webpack</span>
               </Tooltip>
+              , что позволило ускорить запуск продукта и повысить качество
+              аналитики для бизнеса.
             </>
           }
         />
@@ -73,7 +80,9 @@ const Plarium = () => {
               <Tooltip title="Keep It Simple, Stupid - Сохраняйте простоту и избегайте лишней сложности">
                 <span className="term">KISS</span>
               </Tooltip>
-              . Очистил сложно-читаемый Legacy код из бизнес логики.
+              . Очистил сложно-читаемый Legacy код из бизнес логики, что
+              повысило скорость внедрения новых фич и упростило поддержку
+              проекта.
             </>
           }
         />
@@ -89,6 +98,8 @@ const Plarium = () => {
               <Tooltip title="JavaScript-библиотека для создания пользовательских интерфейсов">
                 <span className="term">React</span>
               </Tooltip>
+              , что позволило автоматизировать процессы и повысить удобство
+              работы пользователей.
             </>
           }
         />

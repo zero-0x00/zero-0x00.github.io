@@ -24,6 +24,7 @@ interface WorkTimelineItemProps {
   logo: ReactNode;
   children: ReactNode;
   isLast?: boolean;
+  className?: string;
 }
 
 const WorkTimelineItem = ({
@@ -34,6 +35,7 @@ const WorkTimelineItem = ({
   logo,
   children,
   isLast = false,
+  className,
 }: WorkTimelineItemProps) => {
   const isPrintMode = useIsPrintMode();
   const isMobile = useIsMobile();
@@ -50,7 +52,7 @@ const WorkTimelineItem = ({
   };
 
   return isMobile || isPrintMode ? (
-    <TimelineItem className={'section'}>
+    <TimelineItem className={className}>
       <TimelineContent>
         <Card variant="outlined" sx={{ mb: 3 }}>
           <CardContent>
@@ -93,7 +95,7 @@ const WorkTimelineItem = ({
       </TimelineContent>
     </TimelineItem>
   ) : (
-    <TimelineItem className={'section'}>
+    <TimelineItem>
       <TimelineOppositeContent color="text.secondary" sx={{ mt: 0.75 }}>
         {period}
       </TimelineOppositeContent>

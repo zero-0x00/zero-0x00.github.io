@@ -15,6 +15,7 @@ function SoftSkills() {
       title="Soft Skills"
       id="soft-skills"
       defaultExpanded={true}
+      className={'section'}
     >
       <Box sx={{ mt: 1 }}>
         <List dense>
