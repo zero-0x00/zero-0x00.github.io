@@ -51,7 +51,7 @@ function Header() {
             spacing={isPrintMode ? 1 : 0}
           >
             <Typography variant={isMobile ? 'subtitle1' : 'h5'}>
-              Senior Frontend Developer
+              Lead Frontend Developer
             </Typography>
             <Typography variant={isMobile ? 'subtitle2' : 'h6'}>
               Максим Бугай
