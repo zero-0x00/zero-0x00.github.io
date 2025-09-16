@@ -36,7 +36,7 @@ function Header() {
               src={avatarImage}
               sx={
                 isMobile
-                  ? { width: 96, height: 96 }
+                  ? { width: 84, height: 84 }
                   : { width: 136, height: 136 }
               }
             />
@@ -51,7 +51,7 @@ function Header() {
             spacing={isPrintMode ? 1 : 0}
           >
             <Typography variant={isMobile ? 'subtitle1' : 'h5'}>
-              Lead Frontend Developer
+              Senior Frontend Developer
             </Typography>
             <Typography variant={isMobile ? 'subtitle2' : 'h6'}>
               Максим Бугай
@@ -130,7 +130,7 @@ function Header() {
             >
               <Typography variant={'caption'}>
                 Удалённо / Гибрид (Москва) | 33 года | Желаемая вилка оклада: от
-                350 000 ₽
+                320 000 ₽
               </Typography>
             </Grid>
           ) : (
