@@ -149,7 +149,7 @@ function Header() {
                 variant={'caption'}
                 sx={{ fontWeight: 500, color: 'success.main', mt: 0.5 }}
               >
-                Желаемая вилка оклада: от 350 000 ₽
+                Желаемая вилка оклада: от 320 000 ₽
               </Typography>
             </Grid>
           )}
