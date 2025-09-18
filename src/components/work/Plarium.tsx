@@ -1,3 +1,5 @@
+'use client';
+
 import PlariumLogoDark from '@assets/plarium_dark.svg';
 import PlariumLogoLight from '@assets/plarium_light.svg';
 import Tooltip from '@ui/Tooltip';

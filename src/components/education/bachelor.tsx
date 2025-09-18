@@ -1,3 +1,5 @@
+'use client';
+
 import SchoolIcon from '@mui/icons-material/School';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';

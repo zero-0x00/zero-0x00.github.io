@@ -1,3 +1,5 @@
+'use client';
+
 import EmailIcon from '@mui/icons-material/Email';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import Avatar from '@mui/material/Avatar';
@@ -34,7 +36,8 @@ function Header() {
             container
           >
             <Avatar
-              src={avatarImage}
+              src={avatarImage.src}
+              alt="Максим Бугай"
               sx={
                 isMobile
                   ? { width: 84, height: 84 }

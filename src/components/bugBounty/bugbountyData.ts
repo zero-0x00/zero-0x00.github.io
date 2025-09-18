@@ -1,4 +1,4 @@
-import { SkillDefinition } from '../skills/types.ts';
+import { SkillDefinition } from '@components/skills/types';
 
 // Определение Bug Bounty программ
 export const bugbountyPrograms: SkillDefinition[] = [

@@ -1,3 +1,5 @@
+'use client';
+
 import AristocratLogoDark from '@assets/aristocrat_dark.svg';
 import AristocratLogoLight from '@assets/aristocrat_light.svg';
 import Tooltip from '@ui/Tooltip';

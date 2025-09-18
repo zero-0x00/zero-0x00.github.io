@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -13,7 +15,7 @@ import { useIsPrintMode } from '@hooks/useIsPrintMode';
 import SectionAccordion from '@ui/SectionAccordion';
 import Tooltip from '@ui/Tooltip';
 
-import { bugbountyPrograms } from './bugbountyData.ts';
+import { bugbountyPrograms } from './bugbountyData';
 
 function BugBounty() {
   const isPrintMode = useIsPrintMode();

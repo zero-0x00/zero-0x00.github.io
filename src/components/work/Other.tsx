@@ -1,3 +1,5 @@
+'use client';
+
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 
 import Tooltip from '@ui/Tooltip';

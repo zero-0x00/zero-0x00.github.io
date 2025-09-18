@@ -1,3 +1,5 @@
+'use client';
+
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import BugReportIcon from '@mui/icons-material/BugReport';
 import CodeIcon from '@mui/icons-material/Code';

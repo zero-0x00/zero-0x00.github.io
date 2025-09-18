@@ -1,18 +1,39 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
 /**
  * Hook for detecting mobile device and screen orientation
- * @returns {Object} - object with isMobile and isLandscape flags
+ * @returns {boolean} - flag indicating if device is mobile
  */
 export const useIsMobile = () => {
-  const isMobileByAgent =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
+  const [isMobile, setIsMobile] = useState(false);
 
-  const isMobileByMediaQuery = window.matchMedia(
-    `(max-width: ${1024}px)`
-  ).matches;
+  useEffect(() => {
+    const checkIsMobile = () => {
+      const isMobileByAgent =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
 
-  const isLowHeight = window.matchMedia(`(max-height: ${512}px)`).matches;
+      const isMobileByMediaQuery = window.matchMedia(
+        `(max-width: ${1024}px)`
+      ).matches;
 
-  return isMobileByAgent || isMobileByMediaQuery || isLowHeight;
+      const isLowHeight = window.matchMedia(`(max-height: ${512}px)`).matches;
+
+      return isMobileByAgent || isMobileByMediaQuery || isLowHeight;
+    };
+
+    setIsMobile(checkIsMobile());
+
+    const handleResize = () => {
+      setIsMobile(checkIsMobile());
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return isMobile;
 };

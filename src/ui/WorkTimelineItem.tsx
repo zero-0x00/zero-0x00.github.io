@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode } from 'react';
 
 import TimelineConnector from '@mui/lab/TimelineConnector';
@@ -12,8 +14,8 @@ import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import { useIsMobile } from '@hooks/useIsMobile.tsx';
-import { useIsPrintMode } from '@hooks/useIsPrintMode.tsx';
+import { useIsMobile } from '@hooks/useIsMobile';
+import { useIsPrintMode } from '@hooks/useIsPrintMode';
 import Tooltip from '@ui/Tooltip';
 
 interface WorkTimelineItemProps {

@@ -1,3 +1,5 @@
+'use client';
+
 import Timeline from '@mui/lab/Timeline';
 
 import { useIsMobile } from '@hooks/useIsMobile';

@@ -1,3 +1,5 @@
+'use client';
+
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
@@ -26,7 +28,12 @@ function SoftSkills() {
               </ListItemIcon>
               <ListItemText
                 primary={skill.description || skill.name}
-                primaryTypographyProps={{ fontSize: 15 }}
+                slotProps={{
+                  primary: {
+                    variant: 'body2',
+                    sx: { fontSize: 15 },
+                  },
+                }}
               />
             </ListItem>
           ))}

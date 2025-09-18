@@ -1,3 +1,5 @@
+'use client';
+
 import MTGLogoDark from '@assets/mtg_dark.svg';
 import MTGLogoLight from '@assets/mtg_light.svg';
 import Tooltip from '@ui/Tooltip';
@@ -11,7 +13,7 @@ const MTG = () => {
   return (
     <WorkTimelineItem
       period="Февраль 2025 — настоящее время"
-      company="GoGame in Plarium (Modern Times Group)"
+      company="GoGame in Plarium (MTG)"
       companyTooltip="Modern Times Group (MTG) — шведская международная медиа-компания, основанная в 1987 году, со штаб-квартирой в Стокгольме. Специализируется на цифровых развлечениях, киберспорте и разработке мобильных игр через свои подразделения ESL Gaming и InnoGames. С 2025 года компанией владеет Plarium."
       position="Lead Frontend Developer"
       logo={isDarkMode ? <MTGLogoDark /> : <MTGLogoLight />}

@@ -3,7 +3,7 @@ import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
 
-import { SkillColorType } from '@components/skills/types.ts';
+import { SkillColorType } from '@components/skills/types';
 
 interface SkillChipProps {
   label: string;
@@ -53,5 +53,7 @@ const SkillChip = React.forwardRef<HTMLDivElement, SkillChipProps>(
     />
   )
 );
+
+SkillChip.displayName = 'SkillChip';
 
 export default SkillChip;
