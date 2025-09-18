@@ -28,9 +28,10 @@ function Header() {
       <Grid container sx={{ my: 2 }}>
         <HeaderGrid container sx={{ width: '100%' }} direction={'row'}>
           <Grid
-            size={isPrintMode ? { xs: 3 } : { xs: 2, md: 2 }}
+            size={isPrintMode ? { xs: 3 } : { xs: 4, md: 2 }}
             alignItems={'center'}
             justifyContent={'center'}
+            container
           >
             <Avatar
               src={avatarImage}
@@ -140,7 +141,7 @@ function Header() {
               direction={'column'}
               justifyContent={'start'}
               alignItems={isMobile ? 'start' : 'end'}
-              sx={{ px: 2 }}
+              sx={{ px: 2, py: 1 }}
             >
               <Typography variant={'caption'}>
                 Удалённо / Гибрид (Москва) | 33 года
